@@ -29,7 +29,7 @@ export default function Home() {
           <div className="row">
             <div className="col-lg-6 col-sm-12 col-xs-12">
               <div className="ab_img">
-                <img src="/assets/images/all-img/Xaviers-Banner-825x1000.webp" className="img-fluid" alt="St. Xavier's CMI School" />
+                <img src="./assets/images/all-img/Xaviers-Banner-825x1000.webp" className="img-fluid" alt="St. Xavier's CMI School" />
                 <div className="wc_year">
                   <h3><span>10+</span> <br />Years of Excellence</h3>
                 </div>
@@ -138,7 +138,7 @@ export default function Home() {
                   </Link>
                 </div>
                 <div className="single_ins_img">
-                  <img src="/assets/images/all-img/become-ins.png" className="img-fluid" alt="Admissions" />
+                  <img src="./assets/images/all-img/become-ins.png" className="img-fluid" alt="Admissions" />
                 </div>
               </div>
             </div>
@@ -157,7 +157,7 @@ export default function Home() {
                   </Link>
                 </div>
                 <div className="single_ins_img">
-                  <img src="/assets/images/all-img/free-course.png" className="img-fluid" alt="Careers" />
+                  <img src="./assets/images/all-img/free-course.png" className="img-fluid" alt="Careers" />
                 </div>
               </div>
             </div>

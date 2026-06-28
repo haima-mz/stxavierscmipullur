@@ -18,7 +18,7 @@ export default function Academics() {
             <div className="row">
               <div className="col-lg-6 col-sm-12 col-xs-12">
                 <div className="ab_img">
-                  <img src={`/assets/images/all-img/about${(i % 3) + 1}.png`} className="img-fluid" alt={s.title} />
+                  <img src={`./assets/images/all-img/about${(i % 3) + 1}.png`} className="img-fluid" alt={s.title} />
                   <div className="wc_year">
                     <h3><span>{s.sub}</span></h3>
                   </div>

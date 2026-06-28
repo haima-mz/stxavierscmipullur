@@ -1,9 +1,9 @@
 import PageTop from '../components/PageTop'
 
 const EVENTS = [
-  { img: '/assets/images/event/e1.png', date: '24', month: 'Jun', title: 'New Academic Year Orientation', time: '9.00AM - 11.00AM', place: 'School Auditorium', text: 'Welcome session for new and existing students for the academic year 2026-27.' },
-  { img: '/assets/images/event/e2.png', date: '15', month: 'Jul', title: 'Parent-Teacher Meeting', time: '10.00AM - 1.00PM', place: 'School Campus', text: 'First PTM of the year to discuss student progress with class teachers.' },
-  { img: '/assets/images/event/e3.png', date: '15', month: 'Aug', title: 'Independence Day Celebration', time: '8.00AM - 10.00AM', place: 'School Ground', text: 'Flag hoisting and cultural programme celebrating Independence Day.' },
+  { img: './assets/images/event/e1.png', date: '24', month: 'Jun', title: 'New Academic Year Orientation', time: '9.00AM - 11.00AM', place: 'School Auditorium', text: 'Welcome session for new and existing students for the academic year 2026-27.' },
+  { img: './assets/images/event/e2.png', date: '15', month: 'Jul', title: 'Parent-Teacher Meeting', time: '10.00AM - 1.00PM', place: 'School Campus', text: 'First PTM of the year to discuss student progress with class teachers.' },
+  { img: './assets/images/event/e3.png', date: '15', month: 'Aug', title: 'Independence Day Celebration', time: '8.00AM - 10.00AM', place: 'School Ground', text: 'Flag hoisting and cultural programme celebrating Independence Day.' },
 ]
 
 export default function Events() {

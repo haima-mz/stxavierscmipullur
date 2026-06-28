@@ -3,12 +3,12 @@ import PageTop from '../components/PageTop'
 
 const CATEGORIES = ['All', 'School', 'Sports', 'Events', 'Cultural']
 const ITEMS = [
-  { id: 1,  category: 'School',   img: '/assets/images/gallery/Xviers825x1000-2.webp' },
-  { id: 2,  category: 'Sports',   img: '/assets/images/gallery/Xviers825x1000-4.webp' },
-  { id: 3,  category: 'Events',   img: '/assets/images/gallery/Xviers825x1000-3.webp' },
-  { id: 4,  category: 'Cultural', img: '/assets/images/gallery/Xviers825x1000-5.webp' },
-  { id: 5,  category: 'School',   img: '/assets/images/gallery/Xviers825x1000-6.webp' },
-  { id: 6,  category: 'Events',   img: '/assets/images/gallery/Xviers825x1000-7.webp' },
+  { id: 1,  category: 'School',   img: './assets/images/gallery/Xviers825x1000-2.webp' },
+  { id: 2,  category: 'Sports',   img: './assets/images/gallery/Xviers825x1000-4.webp' },
+  { id: 3,  category: 'Events',   img: './assets/images/gallery/Xviers825x1000-3.webp' },
+  { id: 4,  category: 'Cultural', img: './assets/images/gallery/Xviers825x1000-5.webp' },
+  { id: 5,  category: 'School',   img: './assets/images/gallery/Xviers825x1000-6.webp' },
+  { id: 6,  category: 'Events',   img: './assets/images/gallery/Xviers825x1000-7.webp' },
 ]
 
 export default function Gallery() {

@@ -1,10 +1,10 @@
 import PageTop from '../components/PageTop'
 
 const FACULTY = [
-  { name: 'Principal', post: 'School Principal', img: '/assets/images/team/1.jpg' },
-  { name: 'Vice Principal', post: 'Academic Coordinator', img: '/assets/images/team/2.jpg' },
-  { name: 'Senior Teacher', post: 'Mathematics & Science', img: '/assets/images/team/3.jpg' },
-  { name: 'Senior Teacher', post: 'English & Languages', img: '/assets/images/team/4.jpg' },
+  { name: 'Principal', post: 'School Principal', img: './assets/images/team/1.jpg' },
+  { name: 'Vice Principal', post: 'Academic Coordinator', img: './assets/images/team/2.jpg' },
+  { name: 'Senior Teacher', post: 'Mathematics & Science', img: './assets/images/team/3.jpg' },
+  { name: 'Senior Teacher', post: 'English & Languages', img: './assets/images/team/4.jpg' },
 ]
 
 export default function Faculty() {
