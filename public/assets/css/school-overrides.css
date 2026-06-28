@@ -1,0 +1,236 @@
+/* ============ LOGO TEXT (template ships an image logo; we use text since no client logo file was provided) ============ */
+.school-logo-text {
+  font-family: 'Lexend', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #1c2530;
+  display: inline-block;
+  line-height: 1.2;
+}
+.school-logo-text span { display: block; font-size: 13px; font-weight: 500; color: #2c7aff; letter-spacing: 0.04em; }
+.school-logo-text--footer { color: #fff; font-size: 24px; }
+.school-logo-text--footer span { color: #2eca7f; }
+
+/* ============ HERO CAROUSEL ============ */
+.school-carousel {
+  overflow: hidden;
+  padding-bottom: 80px;
+}
+.school-carousel__slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.06);
+  transition: opacity 1.2s ease, transform 6s ease;
+  z-index: 0;
+}
+.school-carousel__slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
+}
+.school-carousel__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, rgba(10,20,40,0.82) 0%, rgba(10,20,40,0.55) 55%, rgba(10,20,40,0.25) 100%);
+  z-index: 2;
+}
+.school-carousel .container { position: relative; z-index: 3; }
+.school-carousel__eyebrow {
+  display: inline-block;
+  background: rgba(46,202,127,0.18);
+  color: #2eca7f;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 7px 16px;
+  border-radius: 50px;
+  margin-bottom: 18px;
+}
+.school-carousel__content h1 { color: #fff; }
+.school-carousel__content p { color: #d6dfeb; }
+.school-carousel__fade { animation: schoolFadeUp 0.7s ease; }
+@keyframes schoolFadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.school-carousel__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.35);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+.school-carousel__arrow:hover { background: #2eca7f; border-color: #2eca7f; }
+.school-carousel__arrow--prev { left: 24px; }
+.school-carousel__arrow--next { right: 24px; }
+
+.school-carousel__dots {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  display: flex;
+  gap: 10px;
+}
+.school-carousel__dots button {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.45);
+  border: none;
+  transition: all 0.25s;
+}
+.school-carousel__dots button.is-active {
+  background: #2eca7f;
+  width: 28px;
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .school-carousel__arrow { display: none; }
+}
+
+/* ============ MOBILE MENU TOGGLE (custom, replaces jquery-simple-mobilemenu JS) ============ */
+.school-mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #1c2530;
+  padding: 8px;
+}
+@media (max-width: 1199px) {
+  .school-mobile-toggle { display: inline-flex; }
+  #main-menu { display: none; }
+}
+.mobile_menu {
+  display: none;
+  list-style: none;
+  background: #fff;
+  position: absolute;
+  top: 100%;
+  left: 0; right: 0;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  padding: 10px 0;
+  z-index: 50;
+}
+.mobile_menu.school-mobile-menu--open { display: block; }
+.mobile_menu > li > a {
+  display: block;
+  padding: 12px 24px;
+  font-weight: 600;
+  color: #1c2530;
+  border-bottom: 1px solid #eee;
+}
+.mobile_menu .sub-menu { list-style: none; background: #f7f9fc; }
+.mobile_menu .sub-menu a { padding: 10px 40px; font-weight: 400; font-size: 14px; }
+
+/* ============ MISC SCHOOL ADDITIONS ============ */
+.single_tca-link { text-decoration: none; }
+.school-row-reverse .row { flex-direction: row-reverse; }
+
+.school-map { border-radius: 10px; overflow: hidden; min-height: 420px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+.school-form-submit { border: none; cursor: pointer; margin-top: 10px; }
+
+.school-gallery-filters { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 36px; }
+.school-filter-btn {
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 22px;
+  border-radius: 50px;
+  border: 1.5px solid #e6e2d8;
+  background: #fff;
+  color: #51606e;
+  transition: all 0.25s;
+}
+.school-filter-btn:hover { border-color: #2eca7f; color: #1c2530; }
+.school-filter-btn.is-active { background: #2c7aff; border-color: #2c7aff; color: #fff; }
+
+.school-gallery-item {
+  width: 100%;
+  aspect-ratio: 4/3;
+  border: none;
+  border-radius: 10px;
+  background-size: cover;           /* ← fill the box */
+  background-position: center;      /* ← center the image */
+  background-color: #2c7aff;        /* ← fallback if image fails to load */
+  margin-bottom: 24px;
+  display: flex;
+  align-items: flex-end;
+  padding: 14px;
+  transition: transform 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+/* dark overlay so the category label stays readable over any photo */
+.school-gallery-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%);
+  border-radius: 10px;
+}
+.school-gallery-item:hover { transform: scale(1.03); }
+/* keep the label above the overlay */
+.school-gallery-item span {
+  position: relative;
+  z-index: 1;
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 50px;
+}
+
+.school-lightbox {
+  position: fixed; inset: 0;
+  background: rgba(10,20,40,0.85);
+  z-index: 2000;
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+}
+.school-lightbox__inner {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 560px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+.school-lightbox__image {
+  aspect-ratio: 4/3;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #2c7aff, #2eca7f);
+  margin-bottom: 14px;
+}
+.school-lightbox__close {
+  position: absolute;
+  top: -14px; right: -14px;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: #1c2530;
+  color: #fff;
+  border: none;
+}
+
+.school-search-input {
+  max-width: 420px;
+  border-radius: 50px;
+  padding: 14px 20px;
+}
+
+.school-download-item { padding: 28px; margin-bottom: 24px; }
+.school-download-item p { color: #51606e; margin: 8px 0 14px; }
