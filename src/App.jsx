@@ -12,7 +12,7 @@ import Events from './pages/Events'
 import Gallery from './pages/Gallery'
 import Downloads from './pages/Downloads'
 import Contact from './pages/Contact'
-import NotFound from './pages/NotFound'
+import NotFound from './pages/Home'
 
 export default function App() {
   return (
