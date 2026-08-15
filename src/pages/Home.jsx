@@ -147,7 +147,7 @@ export default function Home() {
                     className="img-fluid"
                     style={{
                       borderRadius: '10px',
-                      height: '160px',
+                      height: '272px',
                       width: '100%',
                       objectFit: 'cover',
                       marginTop: i % 2 === 1 ? '20px' : 0,
