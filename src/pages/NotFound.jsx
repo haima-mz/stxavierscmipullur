@@ -4,7 +4,7 @@ import PageTop from '../components/PageTop'
 export default function NotFound() {
   return (
     <>
-      <PageTop title="404 - Page Not Found" crumb="404" />
+      <PageTop title="404 - Page Not Found" crumb="404" bg="./assets/images/gallery/Xviers825x1000-7.webp"/>
       <section className="section-padding text-center">
         <div className="container">
           <p style={{ marginBottom: '24px' }}>The page you're looking for doesn't exist or has been moved.</p>

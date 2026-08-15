@@ -1,6 +1,14 @@
 import { Link } from 'react-router-dom'
 import HeroCarousel from '../components/HeroCarousel'
 import CounterSection from '../components/CounterSection'
+import { getUpcomingEvents, formatEventBadge } from '../data/schoolEvents'
+
+const GALLERY_PREVIEW = [
+  './assets/images/gallery/Xviers825x1000-2.webp',
+  './assets/images/gallery/Xviers825x1000-4.webp',
+  './assets/images/gallery/Xviers825x1000-3.webp',
+  './assets/images/gallery/Xviers825x1000-5.webp',
+]
 
 const FEATURES = [
   { title: 'Faith-Centered Education', icon: 'fa-solid fa-medal', cls: '', text: 'Holistic learning rooted in Christian values and the CMI tradition.' },
@@ -115,6 +123,92 @@ export default function Home() {
                 </Link>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* GALLERY & UPCOMING EVENTS TEASER */}
+      <section className="topic_content_p2 section-padding">
+        <div className="container">
+          <div className="row" style={{ alignItems: 'center' }}>
+            <div className="col-lg-6 col-sm-12 col-xs-12">
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: '1fr 1fr',
+                  gap: '12px',
+                }}
+              >
+                {GALLERY_PREVIEW.map((src, i) => (
+                  <img
+                    key={src}
+                    src={src}
+                    alt="Life at St. Xavier's CMI School"
+                    className="img-fluid"
+                    style={{
+                      borderRadius: '10px',
+                      height: '160px',
+                      width: '100%',
+                      objectFit: 'cover',
+                      marginTop: i % 2 === 1 ? '20px' : 0,
+                    }}
+                  />
+                ))}
+              </div>
+            </div>
+            <div className="col-lg-6 col-sm-12 col-xs-12">
+              <div className="ab_content">
+                <h2>Life at Our School</h2>
+                <p>
+                  From classroom moments to festivals, sports days and celebrations \u2014 our
+                  gallery captures it all. Here's what's coming up next on the school calendar:
+                </p>
+              </div>
+
+              <div style={{ marginBottom: '24px' }}>
+                {getUpcomingEvents(3).map((e) => {
+                  const badge = formatEventBadge(e.dateObj)
+                  return (
+                    <div
+                      key={e.date + e.title}
+                      style={{
+                        display: 'flex',
+                        gap: '14px',
+                        alignItems: 'center',
+                        padding: '12px 0',
+                        borderBottom: '1px solid #ececec',
+                      }}
+                    >
+                      <div
+                        style={{
+                          flexShrink: 0,
+                          width: '50px',
+                          textAlign: 'center',
+                          background: '#1c2530',
+                          borderRadius: '8px',
+                          padding: '6px 0',
+                          color: '#fff',
+                        }}
+                      >
+                        <div style={{ fontSize: '17px', fontWeight: 700, lineHeight: 1 }}>{badge.day}</div>
+                        <div style={{ fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{badge.month}</div>
+                      </div>
+                      <p style={{ margin: 0, fontSize: '14px', color: '#1c2530', fontWeight: 500 }}>{e.title}</p>
+                    </div>
+                  )
+                })}
+              </div>
+
+              <div className="cta_two">
+                <Link to="/gallery" className="cta">
+                  <span>Visit Our Gallery</span>
+                  <svg width="13px" height="10px" viewBox="0 0 13 10">
+                    <path d="M1,5 L11,5"></path>
+                    <polyline points="8 1 12 5 8 9"></polyline>
+                  </svg>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>

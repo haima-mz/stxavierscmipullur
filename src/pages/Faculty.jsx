@@ -10,7 +10,7 @@ const FACULTY = [
 export default function Faculty() {
   return (
     <>
-      <PageTop title="Our Faculty" crumb="Faculty" />
+      <PageTop title="Our Faculty" crumb="Faculty" bg="./assets/images/gallery/Xviers825x1000-6.webp"/>
 
       <section className="team_member section-padding">
         <div className="container">

@@ -9,7 +9,7 @@ const EVENTS = [
 export default function Events() {
   return (
     <>
-      <PageTop title="News & Events" crumb="Events" />
+      <PageTop title="News & Events" crumb="Events" bg="./assets/images/academics/cocurricular-dance.webp"/>
 
       <section className="our-event section-padding">
         <div className="container">

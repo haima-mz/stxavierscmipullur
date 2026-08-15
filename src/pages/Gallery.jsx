@@ -1,5 +1,7 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import PageTop from '../components/PageTop'
+import { getUpcomingEvents, formatEventBadge } from '../data/schoolEvents'
 
 const CATEGORIES = ['All', 'School', 'Sports', 'Events', 'Cultural']
 const ITEMS = [
@@ -11,14 +13,123 @@ const ITEMS = [
   { id: 6,  category: 'Events',   img: './assets/images/gallery/Xviers825x1000-7.webp' },
 ]
 
+const SOCIAL_REELS = [
+  { platform: 'Facebook',  url: 'https://www.facebook.com/share/r/1JYbqnPwvp/' },
+  { platform: 'Instagram', url: 'https://www.instagram.com/reel/DY9MYw3kQsq/?igsh=aDQyZjMwcGxlaW9h' },
+  { platform: 'Facebook',  url: 'https://www.facebook.com/share/r/1CZcBpAJBM/' },
+  { platform: 'Instagram', url: 'https://www.instagram.com/reel/DZH8JldDB8r/?igsh=OXZlMWQycmYyNzl6' },
+  { platform: 'Facebook',  url: 'https://www.facebook.com/share/r/1Lhzzc8htw/' },
+  { platform: 'Instagram', url: 'https://www.instagram.com/reel/DZQDqdEERdZ/?igsh=MXZydDMwbzQxNWVwag==' },
+  { platform: 'Facebook',  url: 'https://www.facebook.com/share/r/18jB6sVSx5/' },
+  { platform: 'Instagram', url: 'https://www.instagram.com/reel/DZXTQcLjOlR/?igsh=MWY3MGMwdnQ5bHB5' },
+  { platform: 'Facebook',  url: 'https://www.facebook.com/share/r/1FogTcCRH6/' },
+  { platform: 'Instagram', url: 'https://www.instagram.com/reel/DaQFf9bCR2_/?igsh=MXJ3MWdrcnczZjJkYQ==' },
+  { platform: 'Facebook',  url: 'https://www.facebook.com/share/r/192LQpDKGZ/' },
+  { platform: 'Instagram', url: 'https://www.instagram.com/reel/DaXo3iEDrW4/?igsh=bm80NTF6MTYzaHkx' },
+  { platform: 'Facebook',  url: 'https://www.facebook.com/share/r/1CvXXeXKfJ/' },
+  { platform: 'Instagram', url: 'https://www.instagram.com/reel/Da2Fc3PAdyg/?igsh=eno4Z3QwcjE1Z243' },
+  { platform: 'Facebook',  url: 'https://www.facebook.com/share/r/18EFUM89x9/' },
+  { platform: 'Instagram', url: 'https://www.instagram.com/reel/DbF0eHjjRBQ/?igsh=MTBmdXlwanBjNXU3cg==' },
+  { platform: 'Facebook',  url: 'https://www.facebook.com/share/r/1By6yjFzSp/' },
+  { platform: 'Instagram', url: 'https://www.instagram.com/reel/DbpcLE0Ch3Z/?igsh=YnI1bDZ1dXUwY2Jq' },
+]
+
+const PLATFORM_STYLE = {
+  Facebook: { icon: 'fa-brands fa-facebook', color: '#1877F2', label: 'Watch on Facebook' },
+  Instagram: { icon: 'fa-brands fa-instagram', color: '#E1306C', label: 'Watch on Instagram' },
+}
+
+const EVENT_TAG_COLOR = {
+  Celebration: '#2eca7f',
+  Academic: '#2c7aff',
+  Holiday: '#e1306c',
+}
+
 export default function Gallery() {
   const [filter, setFilter] = useState('All')
   const [lightbox, setLightbox] = useState(null)
   const visible = filter === 'All' ? ITEMS : ITEMS.filter((i) => i.category === filter)
+  const upcomingEvents = getUpcomingEvents(8)
 
   return (
     <>
-      <PageTop title="Photo Gallery" crumb="Gallery" />
+      <PageTop title="Photo Gallery" crumb="Gallery" bg="./assets/images/gallery/Xviers825x1000-2.webp"/>
+
+      {/* UPCOMING EVENTS (from the 2026-27 school calendar) */}
+      <section className="topic_content_p2 section-padding" style={{ paddingBottom: 0 }}>
+        <div className="container">
+          <div className="section-title text-center">
+            <h4>What's Next</h4>
+            <h1>Upcoming School Events</h1>
+            <p>Straight from our official 2026\u201327 school calendar \u2014 mark your dates!</p>
+          </div>
+
+          {upcomingEvents.length > 0 ? (
+            <div className="row">
+              {upcomingEvents.map((e) => {
+                const badge = formatEventBadge(e.dateObj)
+                return (
+                  <div className="col-lg-3 col-sm-6 col-xs-12" key={e.date + e.title} style={{ marginBottom: '24px' }}>
+                    <div
+                      style={{
+                        display: 'flex',
+                        gap: '14px',
+                        alignItems: 'flex-start',
+                        padding: '20px',
+                        borderRadius: '10px',
+                        background: '#f7f7f9',
+                        border: '1px solid #ececec',
+                        height: '100%',
+                      }}
+                    >
+                      <div
+                        style={{
+                          flexShrink: 0,
+                          width: '54px',
+                          textAlign: 'center',
+                          background: '#1c2530',
+                          borderRadius: '8px',
+                          padding: '8px 0',
+                          color: '#fff',
+                        }}
+                      >
+                        <div style={{ fontSize: '20px', fontWeight: 700, lineHeight: 1 }}>{badge.day}</div>
+                        <div style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{badge.month}</div>
+                      </div>
+                      <div>
+                        <span
+                          style={{
+                            display: 'inline-block',
+                            fontSize: '11px',
+                            fontWeight: 600,
+                            color: EVENT_TAG_COLOR[e.category] || '#2c7aff',
+                            marginBottom: '4px',
+                          }}
+                        >
+                          {e.category}
+                        </span>
+                        <p style={{ margin: 0, fontSize: '14px', color: '#1c2530', fontWeight: 500 }}>{e.title}</p>
+                      </div>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          ) : (
+            <p className="text-center">Check back soon for updates to the school calendar.</p>
+          )}
+
+          <div className="text-center" style={{ margin: '10px 0 50px' }}>
+            <Link to="/events" className="cta">
+              <span>View Full Events Page</span>
+              <svg width="13px" height="10px" viewBox="0 0 13 10">
+                <path d="M1,5 L11,5"></path>
+                <polyline points="8 1 12 5 8 9"></polyline>
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       <section className="topic_content_p2 section-padding">
         <div className="container">
@@ -50,6 +161,67 @@ export default function Gallery() {
                 </button>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SOCIAL MEDIA REELS */}
+      <section className="topic_content_p2 section-padding" style={{ paddingTop: 0 }}>
+        <div className="container">
+          <div className="section-title text-center">
+            <h4>Follow Our Journey</h4>
+            <h1>School Moments on Social Media</h1>
+            <p>Catch our latest highlights, events and celebrations \u2014 straight from our Facebook and Instagram pages.</p>
+          </div>
+
+          <div className="row">
+            {SOCIAL_REELS.map((reel, idx) => {
+              const meta = PLATFORM_STYLE[reel.platform]
+              return (
+                <div className="col-lg-3 col-sm-6 col-xs-12" key={idx} style={{ marginBottom: '24px' }}>
+                  <a
+                    href={reel.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      textAlign: 'center',
+                      padding: '30px 15px',
+                      borderRadius: '10px',
+                      background: '#f7f7f9',
+                      border: '1px solid #ececec',
+                      height: '100%',
+                      textDecoration: 'none',
+                      transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'translateY(-4px)'
+                      e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.08)'
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'translateY(0)'
+                      e.currentTarget.style.boxShadow = 'none'
+                    }}
+                  >
+                    <i className={meta.icon} style={{ fontSize: '38px', color: meta.color, marginBottom: '14px' }}></i>
+                    <span style={{ fontWeight: 600, color: '#222' }}>{meta.label}</span>
+                    <span style={{ fontSize: '13px', color: '#888', marginTop: '4px' }}>Reel #{Math.floor(idx / 2) + 1}</span>
+                  </a>
+                </div>
+              )
+            })}
+          </div>
+
+          <div className="text-center" style={{ marginTop: '10px' }}>
+            <a href="https://www.facebook.com/stxavierscmischool14" target="_blank" rel="noreferrer" className="cta" style={{ marginRight: '15px' }}>
+              <span>Visit our Facebook Page</span>
+            </a>
+            <a href="https://www.instagram.com/stxavierscmischool" target="_blank" rel="noreferrer" className="cta">
+              <span>Visit our Instagram Page</span>
+            </a>
           </div>
         </div>
       </section>

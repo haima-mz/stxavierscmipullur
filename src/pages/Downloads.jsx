@@ -16,7 +16,7 @@ export default function Downloads() {
 
   return (
     <>
-      <PageTop title="Downloads" crumb="Downloads" />
+      <PageTop title="Downloads" crumb="Downloads" bg="./assets/images/academics/primary-classroom.webp"/>
 
       <section className="topic_content_p2 section-padding">
         <div className="container">

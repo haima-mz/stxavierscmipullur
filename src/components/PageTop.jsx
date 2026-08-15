@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom'
 
-export default function PageTop({ title, crumb }) {
+export default function PageTop({ title, crumb, bg }) {
   return (
-    <section className="section-top">
+    <section
+      className={`section-top ${bg ? 'school-pagetop--img' : ''}`}
+      style={bg ? { backgroundImage: `url(${bg})` } : undefined}
+    >
+      {bg && <div className="school-pagetop__overlay" />}
       <div className="container">
         <div className="col-lg-10 offset-lg-1 text-center">
           <div className="section-top-title">

@@ -13,7 +13,7 @@ export default function Contact() {
 
   return (
     <>
-      <PageTop title="Contact Us" crumb="Contact" />
+      <PageTop title="Contact Us" crumb="Contact" bg="./assets/images/academics/preprimary-outdoor-play.webp"/>
 
       <section className="tp_feature section-padding">
         <div className="container">

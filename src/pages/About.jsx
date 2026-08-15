@@ -3,7 +3,7 @@ import PageTop from '../components/PageTop'
 export default function About() {
   return (
     <>
-      <PageTop title="About Us" crumb="About" />
+      <PageTop title="About Us" crumb="About" bg="./assets/images/academics/senior-classroom-reading.webp"/>
 
       <section className="ab_one section-padding">
         <div className="container">

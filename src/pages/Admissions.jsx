@@ -15,7 +15,7 @@ export default function Admissions() {
 
   return (
     <>
-      <PageTop title="Admissions" crumb="Admissions" />
+      <PageTop title="Admissions" crumb="Admissions" bg="./assets/images/academics/primary-classroom-backpacks.webp"/>
 
       <section className="tp_feature section-padding">
         <div className="container">
