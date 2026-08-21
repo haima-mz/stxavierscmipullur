@@ -11,6 +11,30 @@ const ITEMS = [
   { id: 4,  category: 'Cultural', img: './assets/images/gallery/Xviers825x1000-5.webp' },
   { id: 5,  category: 'School',   img: './assets/images/gallery/Xviers825x1000-6.webp' },
   { id: 6,  category: 'Events',   img: './assets/images/gallery/Xviers825x1000-7.webp' },
+  { id: 7,  category: 'Cultural', img: './assets/images/amenities/dance-1.webp' },
+  { id: 8,  category: 'Cultural', img: './assets/images/amenities/dance-2.webp' },
+  { id: 9,  category: 'Cultural', img: './assets/images/amenities/dance-3.webp' },
+  { id: 10, category: 'Cultural', img: './assets/images/amenities/dance-4.webp' },
+  { id: 11, category: 'Cultural', img: './assets/images/amenities/dance-5.webp' },
+  { id: 12, category: 'Cultural', img: './assets/images/amenities/dance-6.webp' },
+  { id: 13, category: 'School',   img: './assets/images/amenities/classroom-kids-1.webp' },
+  { id: 14, category: 'School',   img: './assets/images/amenities/classroom-kids-2.webp' },
+  { id: 15, category: 'School',   img: './assets/images/amenities/classroom-kids-3.webp' },
+  { id: 16, category: 'School',   img: './assets/images/amenities/classroom-writing.jpg' },
+  { id: 17, category: 'Sports',   img: './assets/images/amenities/archery-range.webp' },
+  { id: 18, category: 'Sports',   img: './assets/images/amenities/indoor-outdoor-sports.webp' },
+]
+
+const REEL_THUMBS = [
+  './assets/images/gallery/Xviers825x1000-2.webp',
+  './assets/images/gallery/Xviers825x1000-3.webp',
+  './assets/images/gallery/Xviers825x1000-4.webp',
+  './assets/images/gallery/Xviers825x1000-5.webp',
+  './assets/images/gallery/Xviers825x1000-6.webp',
+  './assets/images/gallery/Xviers825x1000-7.webp',
+  './assets/images/academics/cocurricular-dance.webp',
+  './assets/images/academics/preprimary-outdoor-play.webp',
+  './assets/images/academics/primary-classroom-backpacks.webp',
 ]
 
 const SOCIAL_REELS = [
@@ -32,7 +56,7 @@ const SOCIAL_REELS = [
   { platform: 'Instagram', url: 'https://www.instagram.com/reel/DbF0eHjjRBQ/?igsh=MTBmdXlwanBjNXU3cg==' },
   { platform: 'Facebook',  url: 'https://www.facebook.com/share/r/1By6yjFzSp/' },
   { platform: 'Instagram', url: 'https://www.instagram.com/reel/DbpcLE0Ch3Z/?igsh=YnI1bDZ1dXUwY2Jq' },
-]
+].map((reel, idx) => ({ ...reel, thumb: REEL_THUMBS[idx % REEL_THUMBS.length] }))
 
 const PLATFORM_STYLE = {
   Facebook: { icon: 'fa-brands fa-facebook', color: '#1877F2', label: 'Watch on Facebook' },
@@ -53,7 +77,7 @@ export default function Gallery() {
 
   return (
     <>
-      <PageTop title="Photo Gallery" crumb="Gallery" bg="./assets/images/gallery/Xviers825x1000-2.webp"/>
+      <PageTop title="Photo Gallery" crumb="Gallery" bg="./assets/images/gallery/Xviers825x1000-2.webp" />
 
       {/* UPCOMING EVENTS (from the 2026-27 school calendar) */}
       <section className="topic_content_p2 section-padding" style={{ paddingBottom: 0 }}>
@@ -61,7 +85,7 @@ export default function Gallery() {
           <div className="section-title text-center">
             <h4>What's Next</h4>
             <h1>Upcoming School Events</h1>
-            <p>Straight from our official 2026\u201327 school calendar \u2014 mark your dates!</p>
+            <p>Straight from our official 2026-27 school calendar, mark your dates!</p>
           </div>
 
           {upcomingEvents.length > 0 ? (
@@ -171,7 +195,7 @@ export default function Gallery() {
           <div className="section-title text-center">
             <h4>Follow Our Journey</h4>
             <h1>School Moments on Social Media</h1>
-            <p>Catch our latest highlights, events and celebrations \u2014 straight from our Facebook and Instagram pages.</p>
+            <p>Catch our latest highlights, events and celebrations, straight from our Facebook and Instagram pages.</p>
           </div>
 
           <div className="row">
@@ -184,16 +208,11 @@ export default function Gallery() {
                     target="_blank"
                     rel="noreferrer"
                     style={{
-                      display: 'flex',
-                      flexDirection: 'column',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      textAlign: 'center',
-                      padding: '30px 15px',
+                      display: 'block',
                       borderRadius: '10px',
+                      overflow: 'hidden',
                       background: '#f7f7f9',
                       border: '1px solid #ececec',
-                      height: '100%',
                       textDecoration: 'none',
                       transition: 'transform 0.2s ease, box-shadow 0.2s ease',
                     }}
@@ -206,9 +225,63 @@ export default function Gallery() {
                       e.currentTarget.style.boxShadow = 'none'
                     }}
                   >
-                    <i className={meta.icon} style={{ fontSize: '38px', color: meta.color, marginBottom: '14px' }}></i>
-                    <span style={{ fontWeight: 600, color: '#222' }}>{meta.label}</span>
-                    <span style={{ fontSize: '13px', color: '#888', marginTop: '4px' }}>Reel #{Math.floor(idx / 2) + 1}</span>
+                    <div
+                      style={{
+                        position: 'relative',
+                        aspectRatio: '4 / 5',
+                        backgroundImage: `url(${reel.thumb})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                      }}
+                    >
+                      <div
+                        style={{
+                          position: 'absolute',
+                          inset: 0,
+                          background: 'linear-gradient(180deg, rgba(10,20,40,0.05) 45%, rgba(10,20,40,0.75) 100%)',
+                        }}
+                      />
+                      {/* platform badge */}
+                      <div
+                        style={{
+                          position: 'absolute',
+                          top: '10px',
+                          right: '10px',
+                          width: '30px',
+                          height: '30px',
+                          borderRadius: '50%',
+                          background: meta.color,
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                        }}
+                      >
+                        <i className={meta.icon} style={{ fontSize: '15px', color: '#fff' }}></i>
+                      </div>
+                      {/* play button */}
+                      <div
+                        style={{
+                          position: 'absolute',
+                          top: '50%',
+                          left: '50%',
+                          transform: 'translate(-50%, -50%)',
+                          width: '46px',
+                          height: '46px',
+                          borderRadius: '50%',
+                          background: 'rgba(255,255,255,0.9)',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                        }}
+                      >
+                        <i className="fa-solid fa-play" style={{ fontSize: '16px', color: '#1c2530', marginLeft: '3px' }}></i>
+                      </div>
+                      {/* label */}
+                      <div style={{ position: 'absolute', bottom: '10px', left: '12px', right: '12px' }}>
+                        <span style={{ fontWeight: 600, color: '#fff', fontSize: '13px', display: 'block' }}>{meta.label}</span>
+                        <span style={{ fontSize: '12px', color: 'rgba(255,255,255,0.75)' }}>Reel #{Math.floor(idx / 2) + 1}</span>
+                      </div>
+                    </div>
                   </a>
                 </div>
               )

@@ -1,49 +1,173 @@
 import PageTop from '../components/PageTop'
 
-const FACULTY = [
-  { name: 'Principal', post: 'School Principal', img: './assets/images/team/1.jpg' },
-  { name: 'Vice Principal', post: 'Academic Coordinator', img: './assets/images/team/2.jpg' },
-  { name: 'Senior Teacher', post: 'Mathematics & Science', img: './assets/images/team/3.jpg' },
-  { name: 'Senior Teacher', post: 'English & Languages', img: './assets/images/team/4.jpg' },
+// ============================================================
+// EDIT STAFF DETAILS HERE.
+// Each entry needs: name, designation, qualification, experience, img.
+// "qualification" and "experience" are placeholders — replace the text
+// below with the real details whenever you have them; nothing else in
+// the layout needs to change.
+// ============================================================
+
+const LEADERSHIP = [
+  {
+    name: 'Fr. Arun Painedath CMI',
+    designation: 'CMI Administration', // TODO: confirm exact title (e.g. Manager / Principal)
+    qualification: 'To be updated',
+    experience: 'To be updated',
+    img: './assets/images/faculty/fr-arun-painedath.webp',
+  },
+  {
+    name: 'Fr. Jose Nandhikkara CMI',
+    designation: 'CMI Devamatha Province, Thrissur',
+    qualification: 'To be updated',
+    experience: 'To be updated',
+    img: './assets/images/faculty/fr-jose-nandhikkara.webp',
+  },
+  {
+    name: 'Fr. Jose Payyappilly CMI',
+    designation: 'CMI Administration', // TODO: confirm exact title
+    qualification: 'To be updated',
+    experience: 'To be updated',
+    img: './assets/images/faculty/fr-jose-payyappilly.webp',
+  },
 ]
+
+const STAFF = [
+  {
+    name: 'Remya Gireesh',
+    designation: 'KG Coordinator',
+    qualification: 'To be updated',
+    experience: 'To be updated',
+    img: './assets/images/faculty/remya-gireesh.webp',
+  },
+  {
+    name: 'Jithin Joseph Joy',
+    designation: 'Accountant',
+    qualification: 'To be updated',
+    experience: 'To be updated',
+    img: './assets/images/faculty/jithin-joseph-joy.webp',
+  },
+  {
+    name: 'Mejo M J',
+    designation: 'Accountant',
+    qualification: 'To be updated',
+    experience: 'To be updated',
+    img: './assets/images/faculty/mejo-m-j.webp',
+  },
+  {
+    name: 'Bency Jacob',
+    designation: 'Teacher',
+    qualification: 'To be updated',
+    experience: 'To be updated',
+    img: './assets/images/faculty/bency-jacob.webp',
+  },
+  {
+    name: 'Bini K R',
+    designation: 'Teacher',
+    qualification: 'To be updated',
+    experience: 'To be updated',
+    img: './assets/images/faculty/bini-k-r.webp',
+  },
+  {
+    name: 'Disna Jose K',
+    designation: 'Teacher',
+    qualification: 'To be updated',
+    experience: 'To be updated',
+    img: './assets/images/faculty/disna-jose-k.webp',
+  },
+  {
+    name: 'Fathima Zuhaira Bindu',
+    designation: 'Teacher',
+    qualification: 'To be updated',
+    experience: 'To be updated',
+    img: './assets/images/faculty/fathima-zuhaira-bindu.webp',
+  },
+  {
+    name: 'Gifty Jeeson',
+    designation: 'Teacher',
+    qualification: 'To be updated',
+    experience: 'To be updated',
+    img: './assets/images/faculty/gifty-jeeson.webp',
+  },
+  {
+    name: 'Jiji M G',
+    designation: 'Teacher',
+    qualification: 'To be updated',
+    experience: 'To be updated',
+    img: './assets/images/faculty/jiji-m-g.webp',
+  },
+  {
+    name: 'Bini Baby',
+    designation: 'Teacher',
+    qualification: 'To be updated',
+    experience: 'To be updated',
+    img: './assets/images/faculty/bini-baby.webp',
+  },
+  {
+    name: 'Jayachithra Menon',
+    designation: 'Teacher',
+    qualification: 'To be updated',
+    experience: 'To be updated',
+    img: './assets/images/faculty/jayachithra-menon.webp',
+  },
+  {
+    name: 'Muhammad Munavar E K',
+    designation: 'Teacher',
+    qualification: 'To be updated',
+    experience: 'To be updated',
+    img: './assets/images/faculty/muhammad-munavar-ek.webp',
+  },
+]
+
+function StaffCard({ person }) {
+  return (
+    <div className="school-staff-card">
+      <div className="school-staff-card__img">
+        <img src={person.img} alt={person.name} loading="lazy" />
+      </div>
+      <div className="school-staff-card__body">
+        <h3>{person.name}</h3>
+        <span className="school-staff-card__designation">{person.designation}</span>
+        <ul className="school-staff-card__meta">
+          <li><strong>Qualification:</strong> {person.qualification}</li>
+          <li><strong>Experience:</strong> {person.experience}</li>
+        </ul>
+      </div>
+    </div>
+  )
+}
 
 export default function Faculty() {
   return (
     <>
-      <PageTop title="Our Faculty" crumb="Faculty" bg="./assets/images/gallery/Xviers825x1000-6.webp"/>
+      <PageTop title="Our Faculty" crumb="Faculty" bg="./assets/images/gallery/Xviers825x1000-6.webp" />
 
       <section className="team_member section-padding">
+        <div className="container">
+          <div className="section-title">
+            <h4>Leadership</h4>
+            <h1>School Administration</h1>
+          </div>
+          <div className="row">
+            {LEADERSHIP.map((p) => (
+              <div className="col-lg-4 col-sm-6 col-xs-12" key={p.name} style={{ marginBottom: '30px' }}>
+                <StaffCard person={p} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="team_member section-padding" style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="section-title">
             <h4>Meet Our Team</h4>
             <h1>Caring, Experienced Educators</h1>
           </div>
-          <div className="row text-center">
-            {FACULTY.map((f, i) => (
-              <div className="col-md-3 col-sm-6 col-xs-12" key={f.name + i}>
-                <div className="our-team">
-                  {i % 2 === 0 ? (
-                    <>
-                      <div className="team-content">
-                        <h3 className="title">{f.name}</h3>
-                        <span className="post">{f.post}</span>
-                      </div>
-                      <div className="team_img">
-                        <img src={f.img} alt={f.name} />
-                      </div>
-                    </>
-                  ) : (
-                    <>
-                      <div className="team_img">
-                        <img src={f.img} alt={f.name} />
-                      </div>
-                      <div className="team-content">
-                        <h3 className="title">{f.name}</h3>
-                        <span className="post">{f.post}</span>
-                      </div>
-                    </>
-                  )}
-                </div>
+          <div className="row">
+            {STAFF.map((p) => (
+              <div className="col-lg-3 col-sm-6 col-xs-12" key={p.name} style={{ marginBottom: '30px' }}>
+                <StaffCard person={p} />
               </div>
             ))}
           </div>

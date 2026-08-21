@@ -13,7 +13,7 @@ export default function Contact() {
 
   return (
     <>
-      <PageTop title="Contact Us" crumb="Contact" bg="./assets/images/academics/preprimary-outdoor-play.webp"/>
+      <PageTop title="Contact Us" crumb="Contact" bg="./assets/images/academics/preprimary-outdoor-play.webp" />
 
       <section className="tp_feature section-padding">
         <div className="container">
@@ -22,7 +22,7 @@ export default function Contact() {
               <div className="single_tp">
                 <h3>Visit Us</h3>
                 <i className="fa-solid fa-location-dot"></i>
-                <p>Pullur P.O., Irinjalakuda, Thrissur, Kerala \u2013 680683</p>
+                <p>Pullur P.O., Irinjalakuda, Thrissur, Kerala - 680683</p>
               </div>
             </div>
             <div className="col-lg-3 col-sm-6 col-xs-12">
@@ -43,7 +43,7 @@ export default function Contact() {
               <div className="single_tp st_three">
                 <h3>Office Hours</h3>
                 <i className="fa-solid fa-clock"></i>
-                <p>Mon to Sat: 9am \u2013 4pm</p>
+                <p>Mon to Sat: 9am - 4pm</p>
               </div>
             </div>
           </div>

@@ -71,7 +71,7 @@ export default function Footer() {
           <div className="col-lg-2 col-sm-6 col-xs-12">
             <div className="single_footer">
               <h4>Admissions</h4>
-              <p>Admissions for 2026\u201327 are now open, Pre-KG to Class VIII.</p>
+              <p>Admissions for 2026-27 are now open, Pre-KG to Class VIII.</p>
               <Link to="/admissions" className="cta" style={{ marginTop: '10px', display: 'inline-flex' }}>
                 <span>Apply Now</span>
                 <svg width="13px" height="10px" viewBox="0 0 13 10">

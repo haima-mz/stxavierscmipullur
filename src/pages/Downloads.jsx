@@ -16,7 +16,7 @@ export default function Downloads() {
 
   return (
     <>
-      <PageTop title="Downloads" crumb="Downloads" bg="./assets/images/academics/primary-classroom.webp"/>
+      <PageTop title="Downloads" crumb="Downloads" bg="./assets/images/academics/primary-classroom.webp" />
 
       <section className="topic_content_p2 section-padding">
         <div className="container">
@@ -41,7 +41,7 @@ export default function Downloads() {
                 <div className="single_tp school-download-item" style={{ textAlign: 'left' }}>
                   <i className="fa-solid fa-file-pdf" style={{ color: '#2c7aff', fontSize: '28px' }}></i>
                   <h3 style={{ marginTop: '14px' }}>{f.name}</h3>
-                  <p>{f.category} \u00b7 {f.size}</p>
+                  <p>{f.category} - {f.size}</p>
                   <a href="#" className="cta">
                     <span>Download</span>
                     <svg width="13px" height="10px" viewBox="0 0 13 10">

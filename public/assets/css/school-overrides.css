@@ -235,37 +235,22 @@
 .school-download-item { padding: 28px; margin-bottom: 24px; }
 .school-download-item p { color: #51606e; margin: 8px 0 14px; }
 
-
-/* ============ PAGE TOP BANNER IMAGE ============ */
-.section-top.school-pagetop--img {
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-.school-pagetop__overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(10,20,40,0.5) 0%, rgba(10,20,40,0.78) 100%);
-  z-index: 0;
-}
-.section-top.school-pagetop--img .container { position: relative; z-index: 1; }
-.section-top.school-pagetop--img .section-top-title h1 { color: #fff; }
-.section-top.school-pagetop--img .section-top-title ul { background: rgba(255,255,255,0.94); }
-
-
 /* ============ IN-CARD IMAGE CAROUSEL (stage photos, academics page) ============ */
 .school-img-carousel__frame {
   position: relative;
-  width: 75%;
+  width: 100%;
   border-radius: 10px;
   overflow: hidden;
   aspect-ratio: 4 / 5;
+  background: #f7f7f9;
+  height:650px;
 }
 .school-img-carousel__img {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  top: 9%;
+  left: 12.5%;
+  width: 75%;
+  height: 59%;
   object-fit: cover;
   opacity: 0;
   transform: scale(1.04);
@@ -275,15 +260,15 @@
 .school-img-carousel__img.is-active {
   opacity: 1;
   transform: scale(1);
-  position: relative;
   z-index: 1;
 }
 .school-img-carousel__arrow {
   position: absolute;
-  top: 50%;
+  top: 41%;
   transform: translateY(-50%);
   z-index: 2;
-  width: 38px; height: 38px;
+  width: 40px; 
+  height: 38px;
   border-radius: 50%;
   background: rgba(255,255,255,0.85);
   border: 1px solid rgba(0,0,0,0.08);
@@ -292,12 +277,12 @@
   transition: background 0.2s, color 0.2s;
 }
 .school-img-carousel__arrow:hover { background: #2eca7f; color: #fff; }
-.school-img-carousel__arrow--prev { left: 14px; }
-.school-img-carousel__arrow--next { right: 170px; }
+.school-img-carousel__arrow--prev { left: 98px; }
+.school-img-carousel__arrow--next { right: 104px; }
 .school-img-carousel__dots {
   position: absolute;
   bottom: 16px;
-  left: 38%;
+  left: 50%;
   transform: translateX(-50%);
   z-index: 2;
   display: flex;
@@ -315,6 +300,22 @@
   border-color: #2eca7f;
   width: 22px;
   border-radius: 6px;
+}
+@media (max-width: 991px) {
+  .school-img-carousel__arrow--prev { left: 61px; }
+  .school-img-carousel__arrow--next { right: 24px; }
+  .school-img-carousel__img {
+  position: absolute;
+  top: 9%;
+  left: 4%;
+  width: 75%;
+  height: 59%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.04);
+  transition: opacity 0.9s ease, transform 5s ease;
+  border-radius: 10px;
+}
 }
 
 /* ============ CO-CURRICULAR CARDS WITH PHOTO ============ */
@@ -355,3 +356,84 @@
 }
 .school-lab-stats .school-lab-stat h3 { font-size: 26px; color: #2c7aff; margin-bottom: 2px; }
 .school-lab-stats .school-lab-stat span { font-size: 13px; color: #51606e; }
+
+/* ============ PAGE TOP BANNER IMAGE ============ */
+.section-top.school-pagetop--img {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.school-pagetop__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10,20,40,0.5) 0%, rgba(10,20,40,0.78) 100%);
+  z-index: 0;
+}
+.section-top.school-pagetop--img .container {
+  position: relative;
+  z-index: 1;
+}
+.section-top.school-pagetop--img .section-top-title h1 {
+  color: #fff;
+}
+.section-top.school-pagetop--img .section-top-title ul {
+  background: rgba(255,255,255,0.94);
+}
+
+/* ============ STAFF / FACULTY CARDS ============ */
+.school-staff-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(28,37,48,0.08);
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.school-staff-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 26px rgba(28,37,48,0.14);
+}
+.school-staff-card__img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: #f0f2f5;
+}
+.school-staff-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+.school-staff-card__body {
+  padding: 18px 20px 22px;
+  text-align: center;
+}
+.school-staff-card__body h3 {
+  font-size: 17px;
+  margin: 0 0 4px;
+  color: #1c2530;
+}
+.school-staff-card__designation {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #2eca7f;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
+}
+.school-staff-card__meta {
+  list-style: none;
+  margin: 0;
+  padding: 12px 0 0;
+  border-top: 1px solid #ececec;
+  text-align: left;
+}
+.school-staff-card__meta li {
+  font-size: 13px;
+  color: #51606e;
+  margin-bottom: 4px;
+}
+.school-staff-card__meta li:last-child { margin-bottom: 0; }
+.school-staff-card__meta strong { color: #1c2530; }

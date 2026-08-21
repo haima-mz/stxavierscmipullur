@@ -4,20 +4,20 @@ import { Link } from 'react-router-dom'
 const SLIDES = [
   {
     bg: './assets/images/banner/Xaviers-web-Banner-01.webp',
-    title: 'St. Xavier\u2019s CMI School is the right choice for your child!',
-    text: 'A CBSE affiliated school in Pullur, Irinjalakuda \u2014 nurturing intellect, faith and character.',
+    title: 'St. Xavier\'s CMI School is the right choice for your child!',
+    text: 'A CBSE affiliated school in Pullur, Irinjalakuda nurturing intellect, faith and character.',
     cta: { label: 'Explore Academics', to: '/academics' },
   },
   {
     bg: './assets/images/banner/Xaviers-web-Banner-02.webp',
     title: 'Building Confident, Compassionate Global Citizens',
-    text: 'Holistic, value-based education rooted in the CMI tradition \u2014 for mind, body and spirit.',
+    text: 'Holistic, value-based education rooted in the CMI tradition for mind, body and spirit.',
     cta: { label: 'About Our School', to: '/about' },
   },
   {
     bg: './assets/images/banner/Xaviers-web-Banner-03.webp',
-    title: 'Admissions Open for 2026\u201327',
-    text: 'Pre-KG to Class VIII \u2014 give your child a foundation built on knowledge and character.',
+    title: 'Admissions Open for 2026-27',
+    text: 'Pre-KG to Class VIII, give your child a foundation built on knowledge and character.',
     cta: { label: 'Apply Now', to: '/admissions' },
   },
 ]

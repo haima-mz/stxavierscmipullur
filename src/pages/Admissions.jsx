@@ -15,7 +15,7 @@ export default function Admissions() {
 
   return (
     <>
-      <PageTop title="Admissions" crumb="Admissions" bg="./assets/images/academics/primary-classroom-backpacks.webp"/>
+      <PageTop title="Admissions" crumb="Admissions" bg="./assets/images/academics/primary-classroom-backpacks.webp" />
 
       <section className="tp_feature section-padding">
         <div className="container">
@@ -47,7 +47,7 @@ export default function Admissions() {
           <div className="row">
             <div className="col-lg-8 offset-lg-2 col-sm-12 col-xs-12">
               <div className="section-title text-center">
-                <h4>Admission Open 2026\u201327</h4>
+                <h4>Admission Open 2026-27</h4>
                 <h1>Admission Enquiry Form</h1>
               </div>
               <div className="contact">

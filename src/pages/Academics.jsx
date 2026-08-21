@@ -5,7 +5,7 @@ const STAGES = [
   {
     id: 'pre-primary',
     title: 'Pre-Primary',
-    sub: 'Pre-KG \u2013 UKG',
+    sub: 'Pre-KG - UKG',
     text: 'A warm, child-centred space welcoming little learners with play-based early education.',
     images: [
       './assets/images/academics/preprimary-puzzle-kids.webp',
@@ -18,28 +18,30 @@ const STAGES = [
   {
     id: 'primary',
     title: 'Primary School',
-    sub: 'Class I \u2013 IV',
+    sub: 'Class I - IV',
     text: 'Concept-based, application-oriented learning that builds independent, confident young learners.',
     images: [
-      './assets/images/academics/primary-classroom-backpacks.webp',
       './assets/images/academics/primary-classroom.webp',
+      './assets/images/gallery/Xviers825x1000-7.webp',
     ],
   },
   {
     id: 'middle',
     title: 'Middle School',
-    sub: 'Class V \u2013 VII',
+    sub: 'Class V - VII',
     text: 'A subject-based curriculum with rich assignments balancing academics and social growth.',
     images: [
-      './assets/images/all-img/about2.png',
+      './assets/images/gallery/Xviers825x1000-2.webp',
+      './assets/images/gallery/Xviers825x1000-31.webp',
     ],
   },
   {
     id: 'senior',
     title: 'Senior School',
-    sub: 'Class VIII',
+    sub: 'Class VIII - X',
     text: 'CBSE curriculum grooming students for secondary education and the challenges ahead.',
     images: [
+      './assets/images/academics/primary-classroom-backpacks.webp',
       './assets/images/academics/senior-classroom-reading.webp',
     ],
   },
@@ -48,7 +50,7 @@ const STAGES = [
 export default function Academics() {
   return (
     <>
-      <PageTop title="Academics" crumb="Academics" bg="./assets/images/academics/science-lab-microscope.webp"/>
+      <PageTop title="Academics" crumb="Academics" bg="./assets/images/academics/science-lab-microscope.webp" />
 
       {STAGES.map((s, i) => (
         <section id={s.id} key={s.id} className={`ab_one section-padding ${i % 2 === 1 ? 'school-row-reverse' : ''}`}>
@@ -92,7 +94,7 @@ export default function Academics() {
                   From examining specimens under the microscope to studying human anatomy models,
                   every session is designed to build curiosity, precision and a genuine love for
                   scientific enquiry. Guided by experienced faculty, students learn to ask questions,
-                  test ideas and draw their own conclusions \u2014 skills that carry far beyond the
+                  test ideas and draw their own conclusions, skills that carry far beyond the
                   classroom.
                 </p>
               </div>
@@ -125,7 +127,34 @@ export default function Academics() {
         </div>
       </section>
 
-      <section className="topic_content_p2 section-padding">
+      {/* CAMPUS AMENITIES */}
+      <section className="topic_content_p2 section-padding" style={{ paddingTop: 0 }}>
+        <div className="container">
+          <div className="section-title">
+            <h4>Beyond The Classroom</h4>
+            <h1>Campus Amenities</h1>
+          </div>
+          <div className="row">
+            {[
+              { icon: 'fa-solid fa-book', title: 'Library', img: './assets/images/amenities/library-campus.webp' },
+              { icon: 'fa-solid fa-bus', title: 'School Transport', img: './assets/images/amenities/school-transport.webp' },
+              { icon: 'fa-solid fa-table-tennis-paddle-ball', title: 'Indoor & Outdoor Games', img: './assets/images/amenities/indoor-outdoor-sports.webp' },
+              { icon: 'fa-solid fa-bullseye', title: 'Archery Range', img: './assets/images/amenities/archery-range.webp' },
+            ].map((c) => (
+              <div className="col-lg-3 col-sm-6 col-xs-12" key={c.title}>
+                <div className="school-cocurr-card" style={{ backgroundImage: `url(${c.img})` }}>
+                  <div className="school-cocurr-card__body">
+                    <i className={c.icon}></i>
+                    <h2><span>{c.title}</span></h2>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="topic_content_p2 section-padding" style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="section-title">
             <h4>Beyond Academics</h4>
@@ -135,7 +164,7 @@ export default function Academics() {
             {[
               { icon: 'fa-solid fa-palette', title: 'Arts & Crafts' },
               { icon: 'fa-solid fa-music', title: 'Music & Dance', img: './assets/images/academics/cocurricular-dance.webp' },
-              { icon: 'fa-solid fa-futbol', title: 'Sports & Fitness' },
+              { icon: 'fa-solid fa-futbol', title: 'Sports & Fitness', img: './assets/images/amenities/archery-range.webp' },
               { icon: 'fa-solid fa-flask', title: 'Science & Computer Labs', img: './assets/images/academics/science-lab-microscope.webp' },
             ].map((c, i) => (
               <div className="col-lg-3 col-sm-6 col-xs-12" key={c.title}>

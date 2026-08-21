@@ -18,10 +18,10 @@ const FEATURES = [
 ]
 
 const STAGES = [
-  { title: 'Pre-Primary', sub: 'Pre-KG \u2013 UKG', to: '/academics#pre-primary' },
-  { title: 'Primary School', sub: 'Class I \u2013 IV', to: '/academics#primary' },
-  { title: 'Middle School', sub: 'Class V \u2013 VII', to: '/academics#middle' },
-  { title: 'Senior School', sub: 'Class VIII', to: '/academics#senior' },
+  { title: 'Pre-Primary', sub: 'Pre-KG - UKG', to: '/academics#pre-primary' },
+  { title: 'Primary School', sub: 'Class I - IV', to: '/academics#primary' },
+  { title: 'Middle School', sub: 'Class V - VII', to: '/academics#middle' },
+  { title: 'Senior School', sub: 'Class VIII - X', to: '/academics#senior' },
 ]
 
 export default function Home() {
@@ -49,7 +49,7 @@ export default function Home() {
                 <p>
                   We, the Carmelites of Mary Immaculate, following the example of our founder
                   Blessed Kuriakose Elias Chavara, consider education integral to forming the
-                  whole person \u2014 academically, morally and spiritually.
+                  whole person - academically, morally and spiritually.
                 </p>
               </div>
               <div className="abmv">
@@ -147,7 +147,7 @@ export default function Home() {
                     className="img-fluid"
                     style={{
                       borderRadius: '10px',
-                      height: '272px',
+                      height: '160px',
                       width: '100%',
                       objectFit: 'cover',
                       marginTop: i % 2 === 1 ? '20px' : 0,
@@ -160,7 +160,7 @@ export default function Home() {
               <div className="ab_content">
                 <h2>Life at Our School</h2>
                 <p>
-                  From classroom moments to festivals, sports days and celebrations \u2014 our
+                  From classroom moments to festivals, sports days and celebrations, our
                   gallery captures it all. Here's what's coming up next on the school calendar:
                 </p>
               </div>
@@ -220,9 +220,9 @@ export default function Home() {
             <div className="col-lg-6 col-sm-12 col-xs-12">
               <div className="single_ins">
                 <div className="single_ins_content">
-                  <h4>Admissions 2026\u201327</h4>
+                  <h4>Admissions 2027-28</h4>
                   <h1>Join Our School Family</h1>
-                  <p>Pre-KG to Class VIII \u2014 seats filling fast for the new academic year.</p>
+                  <p>Pre-KG to Class VIII seats filling fast for the new academic year.</p>
                   <Link to="/admissions" className="cta">
                     <span>Apply Now</span>
                     <svg width="13px" height="10px" viewBox="0 0 13 10">
@@ -232,7 +232,7 @@ export default function Home() {
                   </Link>
                 </div>
                 <div className="single_ins_img">
-                  <img src="./assets/images/all-img/become-ins.png" className="img-fluid" alt="Admissions" />
+                  <img src="./assets/images/all-img/library-campus.webp" className="img-fluid" alt="Admissions" />
                 </div>
               </div>
             </div>
@@ -241,7 +241,7 @@ export default function Home() {
                 <div className="single_ins_content">
                   <h4>We're Hiring</h4>
                   <h1>Join Our Faculty</h1>
-                  <p>Passionate educators \u2014 send your CV and cover letter to our office.</p>
+                  <p>Passionate educators, send your CV and cover letter to our office.</p>
                   <Link to="/contact" className="cta">
                     <span>Contact Us</span>
                     <svg width="13px" height="10px" viewBox="0 0 13 10">
@@ -251,7 +251,7 @@ export default function Home() {
                   </Link>
                 </div>
                 <div className="single_ins_img">
-                  <img src="./assets/images/all-img/free-course.png" className="img-fluid" alt="Careers" />
+                  <img src="./assets/images/all-img/indoor-outdoor-sports.webp" className="img-fluid" alt="Careers" />
                 </div>
               </div>
             </div>
@@ -260,7 +260,7 @@ export default function Home() {
       </section>
 
       {/* NEWSLETTER */}
-      <section className="newsletter_area section-padding">
+      {/* <section className="newsletter_area section-padding">
         <div className="container">
           <div className="row text-center">
             <div className="col-lg-6 offset-lg-3 col-sm-12 col-xs-12">
@@ -275,7 +275,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   )
 }
