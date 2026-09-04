@@ -4,13 +4,20 @@ import PageTop from '../components/PageTop'
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' })
   const [sent, setSent] = useState(false)
+  const [copied, setCopied] = useState(false)
+
+  const email = "info@stxavierscmischool.com"
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value })
   const handleSubmit = (e) => {
     e.preventDefault()
     setSent(true)
   }
-
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText(email)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
   return (
     <>
       <PageTop title="Contact Us" crumb="Contact" bg="./assets/images/academics/preprimary-outdoor-play.webp" />
@@ -33,14 +40,22 @@ export default function Contact() {
               </div>
             </div>
             <div className="col-lg-3 col-sm-6 col-xs-12">
-              <div className="single_tp st_two">
+              <div className="single_tp">
                 <h3>Email Us</h3>
                 <i className="fa-solid fa-envelope"></i>
-                <p>info@stxavierscmischool.com</p>
+                <p>
+                  <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${email}`} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      style={{ color: 'inherit', textDecoration: 'none' }}
+                  >
+                    {copied ? "Copied to clipboard!" : email}
+                  </a>
+                </p>
               </div>
             </div>
             <div className="col-lg-3 col-sm-6 col-xs-12">
-              <div className="single_tp st_three">
+              <div className="single_tp  st_one">
                 <h3>Office Hours</h3>
                 <i className="fa-solid fa-clock"></i>
                 <p>Mon to Sat: 9am - 4pm</p>
