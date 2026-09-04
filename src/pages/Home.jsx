@@ -223,7 +223,7 @@ export default function Home() {
                   <h4>Admissions 2027-28</h4>
                   <h1>Join Our School Family</h1>
                   <p>Pre-KG to Class VIII seats filling fast for the new academic year.</p>
-                  <Link to="/admissions" className="cta">
+                  <Link to="https://onlineadmissionforms.gjschool.xyz/applyonline?admission=U1QuWEFWSUVSJ1MgQ01JIFNDSE9PTF82NA==" target='_blank' className="cta">
                     <span>Apply Now</span>
                     <svg width="13px" height="10px" viewBox="0 0 13 10">
                       <path d="M1,5 L11,5"></path>

@@ -72,13 +72,20 @@ export default function Footer() {
             <div className="single_footer">
               <h4>Admissions</h4>
               <p>Admissions for 2026-27 are now open, Pre-KG to Class VIII.</p>
-              <Link to="/admissions" className="cta" style={{ marginTop: '10px', display: 'inline-flex' }}>
+              <a
+                href="https://onlineadmissionforms.gjschool.xyz/applyonline?admission=U1QuWEFWSUVSJ1MgQ01JIFNDSE9PTF82NA=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cta"
+                style={{ marginTop: '10px', display: 'inline-flex' }}
+              >
                 <span>Apply Now</span>
+
                 <svg width="13px" height="10px" viewBox="0 0 13 10">
                   <path d="M1,5 L11,5"></path>
                   <polyline points="8 1 12 5 8 9"></polyline>
                 </svg>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

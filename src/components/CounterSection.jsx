@@ -4,7 +4,7 @@ const STATS = [
   { icon: 'ti-folder', end: 45, suffix: '+', label: 'Dedicated Teachers', cls: 'sc_one' },
   { icon: 'ti-medall-alt', end: 10, suffix: '+', label: 'Years of Excellence', cls: 'sc_two' },
   { icon: 'ti-id-badge', end: 1500, suffix: '+', label: 'Enrolled Students', cls: 'sc_three' },
-  { icon: 'ti-user', end: 100, suffix: '%', label: 'Student-Centric Learning', cls: 'sc_four' },
+  { icon: 'ti-user', end: 100, suffix: '%', label: 'Student-Centric', cls: 'sc_four' },
 ]
 
 function StatNumber({ end, suffix }) {

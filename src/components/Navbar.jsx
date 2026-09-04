@@ -101,7 +101,7 @@ export default function Navbar() {
 
             <div className="col-30 d-none d-xl-block text-end align-self-center">
               <div className="call_to_action">
-                <Link className="btn_two" to="/admissions">Admissions Open <i className="fa-solid fa-arrow-right"></i></Link>
+                <Link className="btn_two" to="https://onlineadmissionforms.gjschool.xyz/applyonline?admission=U1QuWEFWSUVSJ1MgQ01JIFNDSE9PTF82NA==" target='_blank'>Admissions Open <i className="fa-solid fa-arrow-right"></i></Link>
               </div>
             </div>
 

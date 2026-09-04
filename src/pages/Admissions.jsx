@@ -48,45 +48,19 @@ export default function Admissions() {
             <div className="col-lg-8 offset-lg-2 col-sm-12 col-xs-12">
               <div className="section-title text-center">
                 <h4>Admission Open 2026-27</h4>
-                <h1>Admission Enquiry Form</h1>
+                <a href='https://onlineadmissionforms.gjschool.xyz/applyonline?admission=U1QuWEFWSUVSJ1MgQ01JIFNDSE9PTF82NA==' target='_blank'>
+                  <h3>Click Here for Admission Enquiry Form</h3>
+                </a>
               </div>
               <div className="contact">
-                {submitted ? (
+                {/* {submitted ? (
                   <div className="text-center" style={{ padding: '30px 0' }}>
                     <h3>Thank you, {form.name}!</h3>
                     <p>Your enquiry has been received. Our admissions office will contact you on {form.phone} soon.</p>
                   </div>
                 ) : (
-                  <form className="form" onSubmit={handleSubmit}>
-                    <div className="row">
-                      <div className="form-group col-md-6">
-                        <input type="text" name="name" className="form-control" required placeholder="Parent / Student Name" value={form.name} onChange={handleChange} />
-                      </div>
-                      <div className="form-group col-md-6">
-                        <input type="tel" name="phone" className="form-control" required placeholder="Phone Number" value={form.phone} onChange={handleChange} />
-                      </div>
-                      <div className="form-group col-md-6">
-                        <input type="email" name="email" className="form-control" placeholder="Email Address" value={form.email} onChange={handleChange} />
-                      </div>
-                      <div className="form-group col-md-6">
-                        <select name="forClass" className="form-control" required value={form.forClass} onChange={handleChange}>
-                          <option value="">Class Applying For</option>
-                          {CLASSES.map((c) => <option key={c} value={c}>{c}</option>)}
-                        </select>
-                      </div>
-                      <div className="form-group col-md-12">
-                        <textarea rows="5" name="message" className="form-control" placeholder="Message (optional)" value={form.message} onChange={handleChange}></textarea>
-                      </div>
-                    </div>
-                    <button type="submit" className="cta school-form-submit">
-                      <span>Submit Enquiry</span>
-                      <svg width="13px" height="10px" viewBox="0 0 13 10">
-                        <path d="M1,5 L11,5"></path>
-                        <polyline points="8 1 12 5 8 9"></polyline>
-                      </svg>
-                    </button>
-                  </form>
-                )}
+                 
+                )} */}
               </div>
             </div>
           </div>
