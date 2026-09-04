@@ -4,7 +4,7 @@ import PageTop from '../components/PageTop'
 const FILES = [
   { name: 'Affiliation Letter', category: 'General', size: '240 KB', file: './assets/documents/Affiliation Letter.pdf' },
   { name: 'Building Safety Certificate', category: 'Certificate', size: '180 KB', file: './assets/documents/Building Safety Certificate.pdf'  },
-  { name: 'Fee Structure 2026-27', category: 'General', size: '120 KB', file: './assets/documents/Fee Structure.pdf'  },
+  { name: 'Fee Structure 2026-27', category: 'General', size: '120 KB', file: './assets/documents/fees  structure 2026-27.pdf'  },
   { name: 'Fire Safety Certificate', category: 'Certificate', size: '300 KB', file: './assets/documents/Fire Safety Certificate.pdf'  },
   { name: 'Last 3 Year Result', category: 'Academics', size: '90 KB', file: './assets/documents/last 3 Year Result.pdf'  },
   { name: 'NOC', category: 'Certificate', size: '150 KB', file: './assets/documents/NOC.pdf'  },
