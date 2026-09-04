@@ -12,110 +12,115 @@ const LEADERSHIP = [
   {
     name: 'Fr. Arun Painedath CMI',
     designation: 'CMI Administration', // TODO: confirm exact title (e.g. Manager / Principal)
-    qualification: 'To be updated',
-    experience: 'To be updated',
     img: './assets/images/faculty/fr-arun-painedath.webp',
   },
   {
     name: 'Fr. Jose Nandhikkara CMI',
     designation: 'CMI Devamatha Province, Thrissur',
-    qualification: 'To be updated',
-    experience: 'To be updated',
     img: './assets/images/faculty/fr-jose-nandhikkara.webp',
   },
   {
     name: 'Fr. Jose Payyappilly CMI',
     designation: 'CMI Administration', // TODO: confirm exact title
-    qualification: 'To be updated',
-    experience: 'To be updated',
     img: './assets/images/faculty/fr-jose-payyappilly.webp',
   },
 ]
 
-const STAFF = [
-  {
-    name: 'Remya Gireesh',
-    designation: 'KG Coordinator',
-    qualification: 'To be updated',
-    experience: 'To be updated',
-    img: './assets/images/faculty/remya-gireesh.webp',
-  },
-  {
-    name: 'Jithin Joseph Joy',
-    designation: 'Accountant',
-    qualification: 'To be updated',
-    experience: 'To be updated',
-    img: './assets/images/faculty/jithin-joseph-joy.webp',
-  },
-  {
-    name: 'Mejo M J',
-    designation: 'Accountant',
-    qualification: 'To be updated',
-    experience: 'To be updated',
-    img: './assets/images/faculty/mejo-m-j.webp',
-  },
+const STAFF = [ 
   {
     name: 'Bency Jacob',
-    designation: 'Teacher',
-    qualification: 'To be updated',
-    experience: 'To be updated',
+    designation: 'Teacher',      
     img: './assets/images/faculty/bency-jacob.webp',
   },
   {
+    name: 'Bini Baby',
+    designation: 'Teacher',      
+    img: './assets/images/faculty/bini-baby.webp',
+  },
+  {
     name: 'Bini K R',
-    designation: 'Teacher',
-    qualification: 'To be updated',
-    experience: 'To be updated',
+    designation: 'Teacher',      
     img: './assets/images/faculty/bini-k-r.webp',
   },
   {
     name: 'Disna Jose K',
-    designation: 'Teacher',
-    qualification: 'To be updated',
-    experience: 'To be updated',
+    designation: 'Teacher',      
     img: './assets/images/faculty/disna-jose-k.webp',
   },
   {
     name: 'Fathima Zuhaira Bindu',
-    designation: 'Teacher',
-    qualification: 'To be updated',
-    experience: 'To be updated',
+    designation: 'Teacher',      
     img: './assets/images/faculty/fathima-zuhaira-bindu.webp',
   },
   {
+    name: 'Getty C T',
+    designation: 'Teacher',      
+    img: './assets/images/faculty/getty-c-t.webp',
+  },
+   {
     name: 'Gifty Jeeson',
-    designation: 'Teacher',
-    qualification: 'To be updated',
-    experience: 'To be updated',
+    designation: 'Teacher',      
     img: './assets/images/faculty/gifty-jeeson.webp',
   },
   {
+    name: 'Jayachithra Menon',
+    designation: 'Teacher',      
+    img: './assets/images/faculty/jayachithra-menon.webp',
+  },  
+  {
     name: 'Jiji M G',
-    designation: 'Teacher',
-    qualification: 'To be updated',
-    experience: 'To be updated',
+    designation: 'Teacher',      
     img: './assets/images/faculty/jiji-m-g.webp',
   },
   {
-    name: 'Bini Baby',
-    designation: 'Teacher',
-    qualification: 'To be updated',
-    experience: 'To be updated',
-    img: './assets/images/faculty/bini-baby.webp',
-  },
-  {
-    name: 'Jayachithra Menon',
-    designation: 'Teacher',
-    qualification: 'To be updated',
-    experience: 'To be updated',
-    img: './assets/images/faculty/jayachithra-menon.webp',
-  },
-  {
     name: 'Muhammad Munavar E K',
-    designation: 'Teacher',
-    qualification: 'To be updated',
-    experience: 'To be updated',
+    designation: 'Teacher',      
     img: './assets/images/faculty/muhammad-munavar-ek.webp',
+  },
+  {
+    name: 'Nimi P Unnikrishnan',
+    designation: 'Teacher',      
+    img: './assets/images/faculty/nimi-p-unnikrishnan.webp',
+  },
+  {
+    name: 'Remya Gireesh',
+    designation: 'KG Coordinator',      
+    img: './assets/images/faculty/remya-gireesh.webp',
+  },
+  {
+    name: 'Sayana Sunil',
+    designation: 'Teacher',      
+    img: './assets/images/faculty/sayana-sunil.webp',
+  },
+  {
+    name: 'Sindhu K P',
+    designation: 'Teacher',      
+    img: './assets/images/faculty/sindhu-k-p.webp',
+  },
+  {
+    name: 'Sindhya Dibin',
+    designation: 'Teacher',      
+    img: './assets/images/faculty/sindhya-dibin.webp',
+  },
+  {
+    name: 'Suma K S',
+    designation: 'Teacher',      
+    img: './assets/images/faculty/suma-k-s.webp',
+  },
+  {
+    name: 'Vidhya Subhash Nair',
+    designation: 'Teacher',      
+    img: './assets/images/faculty/vidhya-subhash-nair.webp',
+  },
+  {
+    name: 'Jithin Joseph Joy',
+    designation: 'Accountant',      
+    img: './assets/images/faculty/jithin-joseph-joy.webp',
+  },
+  {
+    name: 'Mejo M J',
+    designation: 'Accountant',      
+    img: './assets/images/faculty/mejo-m-j.webp',
   },
 ]
 
@@ -125,14 +130,10 @@ function StaffCard({ person }) {
       <div className="school-staff-card__img">
         <img src={person.img} alt={person.name} loading="lazy" />
       </div>
-      <div className="school-staff-card__body">
+      {/* <div className="school-staff-card__body">
         <h3>{person.name}</h3>
         <span className="school-staff-card__designation">{person.designation}</span>
-        <ul className="school-staff-card__meta">
-          <li><strong>Qualification:</strong> {person.qualification}</li>
-          <li><strong>Experience:</strong> {person.experience}</li>
-        </ul>
-      </div>
+      </div> */}
     </div>
   )
 }
