@@ -3,8 +3,8 @@ import PageTop from '../components/PageTop'
 const EVENTS = [
   { img: './assets/images/event/Sept2.jpeg', date: '05', month: 'Sep', title: 'Teacher\'s Day', time: '09.00AM - 10.00AM', place: 'Classroom', text: 'Teacher\'s Day celebration at all classes.' },
   { img: './assets/images/event/Sept1.jpeg', date: '07', month: 'Sep', title: 'Science Exhibition', time: '10.00AM - 1.00PM', place: 'School Auditorium', text: 'Conducted to I-X classes.' },
-  { img: './assets/images/event/Sept3.jpeg', date: '25', month: 'Sep', title: 'Sports Day', time: '10.00AM - 1.00PM', place: 'School Ground', text: 'Conducted to I-X classes.' },
-  { img: './assets/images/event/Sept4.jpeg', date: '26', month: 'Sep', title: 'Grand Parent\'s Day', time: '10.00AM - 12.00PM', place: 'School Auditorium', text: 'KG section student will celebrate Grand Parent\'s Day.' },
+  { img: './assets/images/event/Sept3.webp', date: '25', month: 'Sep', title: 'Sports Day', time: '10.00AM - 1.00PM', place: 'School Ground', text: 'Conducted to I-X classes.' },
+  { img: './assets/images/event/Sept4.webp', date: '26', month: 'Sep', title: 'Grand Parent\'s Day', time: '10.00AM - 12.00PM', place: 'School Auditorium', text: 'KG section student will celebrate Grand Parent\'s Day.' },
 ]
 
 export default function Events() {
