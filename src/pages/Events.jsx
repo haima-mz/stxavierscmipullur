@@ -1,9 +1,10 @@
 import PageTop from '../components/PageTop'
 
 const EVENTS = [
-  { img: './assets/images/event/e1.png', date: '24', month: 'Jun', title: 'New Academic Year Orientation', time: '9.00AM - 11.00AM', place: 'School Auditorium', text: 'Welcome session for new and existing students for the academic year 2026-27.' },
-  { img: './assets/images/event/e2.png', date: '15', month: 'Jul', title: 'Parent-Teacher Meeting', time: '10.00AM - 1.00PM', place: 'School Campus', text: 'First PTM of the year to discuss student progress with class teachers.' },
-  { img: './assets/images/event/e3.png', date: '15', month: 'Aug', title: 'Independence Day Celebration', time: '8.00AM - 10.00AM', place: 'School Ground', text: 'Flag hoisting and cultural programme celebrating Independence Day.' },
+  { img: './assets/images/event/Sep2.jpeg', date: '05', month: 'Sep', title: 'Teacher\'s Day', time: '09.00AM - 10.00AM', place: 'Classroom', text: 'Teacher\'s Day celebration at all classes.' },
+  { img: './assets/images/event/Sep1.jpeg', date: '07', month: 'Sep', title: 'Science Exhibition', time: '10.00AM - 1.00PM', place: 'School Auditorium', text: 'Conducted to I-X classes.' },
+  { img: './assets/images/event/Sep3.jpeg', date: '25', month: 'Sep', title: 'Sports Day', time: '10.00AM - 1.00PM', place: 'School Ground', text: 'Conducted to I-X classes.' },
+  { img: './assets/images/event/Sep4.jpeg', date: '26', month: 'Sep', title: 'Grand Parent\'s Day', time: '10.00AM - 12.00PM', place: 'School Auditorium', text: 'KG section student will celebrate Grand Parent\'s Day.' },
 ]
 
 export default function Events() {
@@ -19,15 +20,13 @@ export default function Events() {
                 <div className="event-slide">
                   <div className="event-img">
                     <img src={e.img} alt={e.title} />
-                    <div className="event-date">
-                      <span className="date">{e.date}</span>
-                      <span className="month">{e.month}</span>
-                    </div>
                   </div>
                   <div className="event-content">
                     <h3><a href="#">{e.title}</a></h3>
+                    <span><i className="fa fa-table"></i>{e.date}</span>
+                    <span>{e.month}</span>
                     <span><i className="fa fa-clock-o"></i>{e.time}</span>
-                    <span><i className="fa fa-table"></i><strong>{e.place}</strong></span>
+                    <span><strong>{e.place}</strong></span>
                     <p>{e.text}</p>
                   </div>
                 </div>

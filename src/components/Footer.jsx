@@ -58,7 +58,7 @@ export default function Footer() {
               <div className="sf_contact">
                 <span className="ti-email"></span>
                 <h3>Email Address</h3>
-                <p>info@stxavierscmischool.com</p>
+                <p>officeadmin@stxavierscmischool.com</p>
               </div>
               <div className="sf_contact">
                 <span className="ti-map"></span>

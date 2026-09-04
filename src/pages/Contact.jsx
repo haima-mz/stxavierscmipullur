@@ -6,7 +6,7 @@ export default function Contact() {
   const [sent, setSent] = useState(false)
   const [copied, setCopied] = useState(false)
 
-  const email = "info@stxavierscmischool.com"
+  const email = "officeadmin@stxavierscmischool.com"
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value })
   const handleSubmit = (e) => {

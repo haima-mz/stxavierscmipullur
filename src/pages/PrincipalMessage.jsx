@@ -52,6 +52,28 @@ export default function PrincipalMessage() {
           </div>
         </div>
       </section>
+      <div className="container">
+          <div className="row">
+            <div className="col-lg-8 offset-lg-2 col-sm-12 col-xs-12">
+              <div className="section-title text-center">
+                <h4>Come and Join with US</h4>
+                <a href='https://onlineadmissionforms.gjschool.xyz/applyonline?admission=U1QuWEFWSUVSJ1MgQ01JIFNDSE9PTF82NA==' target='_blank'>
+                  <h3>Click Here for Admission Enquiry Form</h3>
+                </a>
+              </div>
+              <div className="contact">
+                {/* {submitted ? (
+                  <div className="text-center" style={{ padding: '30px 0' }}>
+                    <h3>Thank you, {form.name}!</h3>
+                    <p>Your enquiry has been received. Our admissions office will contact you on {form.phone} soon.</p>
+                  </div>
+                ) : (
+                 
+                )} */}
+              </div>
+            </div>
+          </div>
+        </div>
     </>
   )
 }

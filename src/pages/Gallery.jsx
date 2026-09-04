@@ -83,9 +83,9 @@ export default function Gallery() {
       <section className="topic_content_p2 section-padding" style={{ paddingBottom: 0 }}>
         <div className="container">
           <div className="section-title text-center">
-            <h4>What's Next</h4>
-            <h1>Upcoming School Events</h1>
-            <p>Straight from our official 2026-27 school calendar, mark your dates!</p>
+            <h4>What's Next</h4><br/>
+            <h5>Upcoming School Events</h5><br/>
+            <h6>Straight from our official 2026-27 school calendar, mark your dates!</h6>
           </div>
 
           {upcomingEvents.length > 0 ? (
@@ -193,9 +193,9 @@ export default function Gallery() {
       <section className="topic_content_p2 section-padding" style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="section-title text-center">
-            <h4>Follow Our Journey</h4>
-            <h1>School Moments on Social Media</h1>
-            <p>Catch our latest highlights, events and celebrations, straight from our Facebook and Instagram pages.</p>
+            <h4>Follow Our Journey</h4><br/>
+            <h5>School Moments on Social Media</h5><br/>
+            <h6>Catch our latest highlights, events and celebrations, straight from our Facebook and Instagram pages.</h6>
           </div>
 
           <div className="row">

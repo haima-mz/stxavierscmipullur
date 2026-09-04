@@ -27,11 +27,11 @@ export default function Admissions() {
             {[
               { step: '01', title: 'Enquiry', text: 'Submit the form below or call the school office.' },
               { step: '02', title: 'Application', text: 'Collect and fill the admission application form.' },
-              { step: '03', title: 'Documents', text: 'Submit the form with required documents.' },
+              { step: '03', title: 'Documents', text: 'Submit the form with attested copy of birth certificate, 2 stampsize photographs, Transfer certificate (T.C.)' },
               { step: '04', title: 'Confirmation', text: 'Seat confirmed after a short interaction.' },
             ].map((s, i) => (
               <div className="col-lg-3 col-sm-6 col-xs-12" key={s.step}>
-                <div className={`single_tp ${i === 1 ? 'st_one' : i === 2 ? 'st_two' : i === 3 ? 'st_three' : ''}`}>
+                <div className={`single_tp ${i === 1 ? 'st_one' : i === 2 ? 'st_two' : i === 3 ? 'st_one' : 'st_two'}`}>
                   <h3>{s.title}</h3>
                   <i className="fa-solid fa-list-check"></i>
                   <p>{s.text}</p>

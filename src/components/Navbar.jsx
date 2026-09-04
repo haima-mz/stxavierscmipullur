@@ -51,7 +51,7 @@ export default function Navbar() {
             <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
               <div className="single-top-contact">
                 <i className="ti-email"></i>
-                <h4><a href="mailto:[email protected]">info@stxavierscmischool.com</a></h4>
+                <h4><a href="mailto:[email protected]">officeadmin@stxavierscmischool.com</a></h4>
               </div>
             </div>
             <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
