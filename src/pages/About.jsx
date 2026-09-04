@@ -10,6 +10,7 @@ const FILES = [
   { name: 'NOC', category: 'Certificate', size: '150 KB', file: './assets/documents/NOC.pdf'  },
   { name: 'PTA Committee', category: 'General', size: '150 KB', file: './assets/documents/PTA.pdf'  },
   { name: 'Recognition Certificate', category: 'Certificate', size: '150 KB', file: './assets/documents/Recognition Certificate.pdf'  },
+  { name: 'School Diary', category: 'General', size: '150 KB', file: './assets/documents/St. Xaviers Diary 2026 - 27.pdf'  },
   { name: 'School Management Committee', category: 'General', size: '150 KB', file: './assets/documents/School Management Committee.pdf'  },
   { name: 'Trust Certificate', category: 'Certificate', size: '150 KB', file: './assets/documents/Trust Certificate.pdf'  },
 ]
