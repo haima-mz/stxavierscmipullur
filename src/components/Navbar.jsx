@@ -3,7 +3,13 @@ import { Link, NavLink } from 'react-router-dom'
 
 const MENU = [
   { label: 'Home', to: '/' },
-  { label: 'About', to: '/about' },
+  { label: 'About', to: '/about',
+    children: [
+      { label: 'Vision & Mission', to: '/VisionMission' },
+      { label: 'Principal Message', to: '/PrincipalMessage' },
+      { label: 'Mandatory Disclosures', to: '/MandatoryDisclosures' },
+    ],
+  },
   {
     label: 'Academics',
     to: '/academics',
@@ -15,13 +21,12 @@ const MENU = [
     ],
   },
   {
-    label: 'Pages',
+    label: 'Facilities',
     to: '#',
     children: [
       { label: 'Faculty', to: '/faculty' },
       { label: 'Events', to: '/events' },
       { label: 'Gallery', to: '/gallery' },
-      { label: 'Downloads', to: '/downloads' },
       { label: 'Admissions', to: '/admissions' },
     ],
   },

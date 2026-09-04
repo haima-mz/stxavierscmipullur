@@ -38,11 +38,11 @@ export default function Footer() {
             <div className="single_footer">
               <h4>School</h4>
               <ul>
-                <li><Link to="/about">About Us</Link></li>
+                <li><Link to="/visionmission">About Us</Link></li>
                 <li><Link to="/faculty">Faculty</Link></li>
                 <li><Link to="/gallery">Gallery</Link></li>
                 <li><Link to="/downloads">Downloads</Link></li>
-                <li><Link to="/about#disclosure">Mandatory Disclosure</Link></li>
+                <li><Link to="/mandatorydisclosure">Mandatory Disclosure</Link></li>
               </ul>
             </div>
           </div>

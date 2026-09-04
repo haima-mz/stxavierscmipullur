@@ -4,7 +4,9 @@ import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
 
 import Home from './pages/Home'
-import About from './pages/About'
+import VisionMission from './pages/VisionMission'
+import PrincipalMessage from './pages/PrincipalMessage'
+import MandatoryDisclosures from './pages/MandatoryDisclosures'
 import Academics from './pages/Academics'
 import Admissions from './pages/Admissions'
 import Faculty from './pages/Faculty'
@@ -22,13 +24,14 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/visionmission" element={<VisionMission />} />
+          <Route path="/principalmessage" element={<PrincipalMessage />} />
+          <Route path="/mandatorydisclosures" element={<MandatoryDisclosures />} />
           <Route path="/academics" element={<Academics />} />
           <Route path="/admissions" element={<Admissions />} />
           <Route path="/faculty" element={<Faculty />} />
           <Route path="/events" element={<Events />} />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/downloads" element={<Downloads />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
