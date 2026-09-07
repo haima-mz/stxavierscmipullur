@@ -3272,7 +3272,7 @@ font-size: 18px;
 * ----------------------------------------------------------------------------------------
 */
 .footer {
-	background:#fff;
+	background:linear-gradient(to right, #eef3fb, #fdf3f7);
 	padding-bottom: 40px;
 }
 

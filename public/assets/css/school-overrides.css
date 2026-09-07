@@ -437,3 +437,220 @@
 }
 .school-staff-card__meta li:last-child { margin-bottom: 0; }
 .school-staff-card__meta strong { color: #1c2530; }
+
+/* ===== Life at Campus — Redesigned Facility Cards ===== */
+.school-life-intro {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 60px;
+}
+.school-life-intro p {
+  font-size: 18px;
+  line-height: 30px;
+  color: #555;
+}
+
+.school-life-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 880px) {
+  .school-life-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.school-life-card {
+  position: relative;
+  display: flex;
+  gap: 22px;
+  background: #fff;
+  border: 1px solid #ededed;
+  border-radius: 18px;
+  padding: 34px 30px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  overflow: hidden;
+}
+
+.school-life-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: var(--slc-accent, #2c7aff);
+  transition: width 0.35s ease;
+}
+
+.school-life-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(26, 45, 98, 0.1);
+  border-color: transparent;
+}
+
+.school-life-card:hover::before {
+  width: 100%;
+  opacity: 0.06;
+}
+
+.school-life-card__icon {
+  flex: 0 0 auto;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: #fff;
+  background: var(--slc-accent, #2c7aff);
+  position: relative;
+  z-index: 1;
+  transition: transform 0.35s ease;
+}
+
+.school-life-card:hover .school-life-card__icon {
+  transform: scale(1.1) rotate(-6deg);
+}
+
+.school-life-card__num {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  font-size: 42px;
+  font-weight: 700;
+  color: #f1f1f1;
+  line-height: 1;
+  z-index: 0;
+  transition: color 0.35s ease;
+}
+
+.school-life-card:hover .school-life-card__num {
+  color: #f6f6f6;
+}
+
+.school-life-card__content {
+  position: relative;
+  z-index: 1;
+}
+
+.school-life-card__content h2 {
+  font-size: 21px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #1a2d62;
+}
+
+.school-life-card__content p {
+  font-size: 15px;
+  line-height: 26px;
+  color: #666;
+  margin-bottom: 0;
+}
+
+.school-life-closing {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.school-life-closing p {
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 32px;
+  color: #1a2d62;
+}
+
+
+/* ===== Co-Curricular Categories — Compact Icon Cards ===== */
+.school-cca-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 991px) {
+  .school-cca-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .school-cca-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.school-cca-card {
+  position: relative;
+  background: #fff;
+  border-radius: 16px;
+  padding: 36px 24px 28px;
+  text-align: center;
+  border: 1px solid #ededed;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.school-cca-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(26, 45, 98, 0.1);
+}
+
+.school-cca-card__bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--cca-accent, #2c7aff);
+  transform: scaleX(0.3);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+
+.school-cca-card:hover .school-cca-card__bar {
+  transform: scaleX(1);
+}
+
+.school-cca-card__icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: var(--cca-accent, #2c7aff);
+  background: color-mix(in srgb, var(--cca-accent, #2c7aff) 12%, #fff);
+  transition: transform 0.35s ease, background 0.35s ease, color 0.35s ease;
+}
+
+.school-cca-card:hover .school-cca-card__icon {
+  background: var(--cca-accent, #2c7aff);
+  color: #fff;
+  transform: scale(1.08) rotate(-4deg);
+}
+
+.school-cca-card h4 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1a2d62;
+  margin-bottom: 10px;
+  line-height: 24px;
+}
+
+.school-cca-card p {
+  font-size: 14px;
+  line-height: 22px;
+  color: #777;
+  margin-bottom: 0;
+}
