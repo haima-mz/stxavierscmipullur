@@ -1028,7 +1028,7 @@ transform: translate(0, -10px);
 }
 
 .ab_content p{margin-bottom: 30px;}
-.ab_content p{margin-bottom: 30px;}
+.ab_content p{text-align:justify;}
 .ab_content ul {margin-bottom:50px;}
 .ab_content ul li {
 	color: #1a2d62;
@@ -3272,14 +3272,14 @@ font-size: 18px;
 * ----------------------------------------------------------------------------------------
 */
 .footer {
-	background:linear-gradient(to right, #eef3fb, #fdf3f7);
+	background:linear-gradient(to right, #b4cdf6, #fdecf2);
 	padding-bottom: 40px;
 }
 
 @media only screen and (max-width:960px) { 
 .single_footer{margin-bottom:40px;}
 }
-.single_footer img{margin-bottom:20px;width: 150px;}
+.single_footer img{margin-bottom:20px;width: 110px;}
 .single_footer h4 {
 	margin-top: 0;
 	margin-bottom: 25px;

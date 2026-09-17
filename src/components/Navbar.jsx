@@ -42,13 +42,13 @@ export default function Navbar() {
       <section className="logo-contact">
         <div className="container">
           <div className="row">
-            <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div className="col-lg-2 col-md-4 col-sm-6 col-xs-12">
               <div className="single-top-contact">
                 <i className="ti-mobile"></i>
                 <h4><a href="tel:+917025092120">+91 70250 92120</a></h4>
               </div>
             </div>
-            <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div className="col-lg-4 col-md-4 col-sm-6 col-xs-12">
               <div className="single-top-contact">
                 <i className="ti-email"></i>
                 <h4><a href="mailto:[email protected]">officeadmin@stxavierscmischool.com</a></h4>
@@ -79,7 +79,8 @@ export default function Navbar() {
           <div className="row">
             <div className="col-20 align-self-center">
               <div className="site-logo">
-                <Link to="/">
+                <Link to="/" className="school-logo-combo">
+                  <img src="/assets/images/school logo.jpeg" alt="" className="school-logo-img" />
                   <span className="school-logo-text">St. Xavier's <span>CMI School</span></span>
                 </Link>
               </div>

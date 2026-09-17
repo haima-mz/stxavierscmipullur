@@ -7,9 +7,9 @@ export default function Footer() {
         <div className="row">
           <div className="col-lg-3 col-sm-6 col-xs-12">
             <div className="single_footer">
-              <span className="school-logo-text school-logo-text--footer">St. Xavier's <span>CMI School</span></span>
+              <img src="/assets/images/school logo.jpeg" alt="St. Xavier's CMI School" className="school-logo-img school-logo-img--footer" />
               <p>
-                A CBSE affiliated institution run by the Carmelites of Mary Immaculate, nurturing
+                St.Xavier's CMI public school is a CBSE affiliated institution run by the Carmelites of Mary Immaculate, nurturing
                 intellect, faith and character in Pullur, Irinjalakuda, Kerala.
               </p>
             </div>
@@ -41,7 +41,6 @@ export default function Footer() {
                 <li><Link to="/visionmission">About Us</Link></li>
                 <li><Link to="/faculty">Faculty</Link></li>
                 <li><Link to="/gallery">Gallery</Link></li>
-                <li><Link to="/downloads">Downloads</Link></li>
                 <li><Link to="/mandatorydisclosure">Mandatory Disclosure</Link></li>
               </ul>
             </div>

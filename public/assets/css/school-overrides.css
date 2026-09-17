@@ -7,9 +7,35 @@
   display: inline-block;
   line-height: 1.2;
 }
-.school-logo-text span { display: block; font-size: 13px; font-weight: 500; color: #2c7aff; letter-spacing: 0.04em; }
-.school-logo-text--footer { color: #fff; font-size: 24px; }
-.school-logo-text--footer span { color: #2eca7f; }
+.school-logo-text span { display: block; font-size: 16px; font-weight: 500; color: #2c7aff; letter-spacing: 0.04em; }
+.school-logo-text--footer { color: #fff; font-size: 26px; }
+.school-logo-text--footer span { color: #050b4f; }
+.school-logo-img {
+  height: 100px;
+  width: 100px;
+  display: block;
+}
+.school-logo-img--footer {
+  height: 100px;
+}
+
+/* Responsive nav logo — scoped to .site-logo so the footer logo (below) is untouched.
+   Desktop (>1199px, same breakpoint the nav already uses) keeps the original 100x100.
+   width:auto (instead of a fixed width) keeps the image's real aspect ratio at every size. */
+@media only screen and (max-width: 1199px) {
+  .site-logo .school-logo-img { height: 64px; width: auto; }
+}
+@media only screen and (max-width: 767px) {
+  .site-logo .school-logo-img { height: 52px; width: auto; }
+}
+@media only screen and (max-width: 480px) {
+  .site-logo .school-logo-img { height: 40px; width: auto; }
+}
+
+/* Responsive footer logo (footer has more vertical room, so it can stay a bit larger) */
+@media only screen and (max-width: 767px) {
+  .school-logo-img--footer { height: 70px; width: auto; }
+}
 
 /* ============ HERO CAROUSEL ============ */
 .school-carousel {
@@ -101,6 +127,25 @@
   .school-carousel__arrow { display: none; }
 }
 
+/* style.css sets .home_bg to a flat 900px with no responsive override at all, so on
+   phones/tablets it was either wasting a huge amount of blank vertical space or,
+   depending on content length, running out of room. Scale it (and the content's
+   top padding) down together at the same breakpoints already used elsewhere on
+   this page, and shrink the carousel's own bottom padding to match. */
+@media only screen and (max-width: 991px) {
+  .home_bg { height: 700px; }
+  .home_content { padding-top: 180px; }
+}
+@media only screen and (max-width: 767px) {
+  .home_bg { height: 620px; }
+  .home_content { padding-top: 140px; }
+  .school-carousel { padding-bottom: 40px; }
+}
+@media only screen and (max-width: 480px) {
+  .home_bg { height: 560px; }
+  .home_content { padding-top: 110px; }
+}
+
 /* ============ MOBILE MENU TOGGLE (custom, replaces jquery-simple-mobilemenu JS) ============ */
 .school-mobile-toggle {
   display: none;
@@ -113,6 +158,11 @@
 @media (max-width: 1199px) {
   .school-mobile-toggle { display: inline-flex; }
   #main-menu { display: none; }
+  /* style.css only hides .col-60 (the nav-menu column) below 991px, but the menu
+     inside it is already hidden here at 1199px — without this, the now-empty
+     55%-wide column leaves a dead gap between the logo and the hamburger button
+     on tablets / small laptops (992px–1199px). */
+  .col-60 { display: none !important; }
 }
 .mobile_menu {
   display: none;
@@ -316,6 +366,24 @@
   transition: opacity 0.9s ease, transform 5s ease;
   border-radius: 10px;
 }
+}
+
+/* The frame had a fixed height:650px stacked on top of aspect-ratio:4/5. A fixed
+   height ignores the element's actual (shrinking) width, so on narrow phones the
+   box stayed a tall, oddly-proportioned 650px regardless of how narrow the column
+   got. Dropping back to height:auto lets aspect-ratio size it correctly at every
+   width; the __img percentages above already scale proportionally with it. */
+@media only screen and (max-width: 767px) {
+  .school-img-carousel__frame { height: auto; }
+}
+
+/* The "wc_year" year badge (used as the ImageCarousel's corner badge) has a fixed
+   left:81px + generous padding from style.css. On phones narrower than ~480px that
+   leaves very little margin before it runs into the frame's right edge. Bring it
+   in from the edge and trim its padding/font so it stays safely inside the frame. */
+@media only screen and (max-width: 480px) {
+  .wc_year h3 { left: 16px; padding: 14px 18px; font-size: 16px; }
+  .wc_year h3 span { font-size: 22px; }
 }
 
 /* ============ CO-CURRICULAR CARDS WITH PHOTO ============ */
