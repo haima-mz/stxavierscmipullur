@@ -77,6 +77,7 @@ a:focus {
 inout{outline:none;}
 p {
   margin-bottom: 0;
+  text-align: justify;
 }
 ul,
 li {
@@ -957,7 +958,7 @@ border: 1px solid #2c7aff!important;
 padding-bottom:50px;
 }
 .single_tp {
-background: #E0EAFA;
+background: #8cb6c0;
 	padding: 40px;
 	margin-bottom: 30px;
 	position: relative;
@@ -1080,11 +1081,15 @@ transform: translate(0, -10px);
 margin-top:0px;
 margin-bottom:60px;
 }
+.wc_year{
+	top:10px;
+	text-align: center;
+}
 }
 .wc_year{text-align: center;}
 .wc_year h3 {
 	background: #fff;
-	top: 73%;
+	top: 10%;
 	left:194px;
 	position: absolute;
 	border-radius: 5px;
@@ -1114,7 +1119,7 @@ margin-bottom:60px;
 .count_area {margin-top: 80px;}
 .wc_year h3 {
 	background: #fff;
-	top: 73%;
+	top: 10%;
 	left:81px;
 	position: absolute;
 	border-radius: 5px;
@@ -3272,14 +3277,14 @@ font-size: 18px;
 * ----------------------------------------------------------------------------------------
 */
 .footer {
-	background:linear-gradient(to right, #b4cdf6, #fdecf2);
+	background:linear-gradient(to right, #c1d7fa, #fbd6e5);
 	padding-bottom: 40px;
 }
 
 @media only screen and (max-width:960px) { 
 .single_footer{margin-bottom:40px;}
 }
-.single_footer img{margin-bottom:20px;width: 110px;}
+.single_footer img{margin-bottom:20px;width: 104px;}
 .single_footer h4 {
 	margin-top: 0;
 	margin-bottom: 25px;

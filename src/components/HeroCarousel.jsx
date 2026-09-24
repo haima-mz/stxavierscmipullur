@@ -15,7 +15,7 @@ const SLIDES = [
     cta: { label: 'About Our School', to: '/about' },
   },
   {
-    bg: './assets/images/banner/Xaviers-web-Banner-03.webp',
+    bg: './assets/images/banner/Xaviers-web-Banner-04.webp',
     title: 'Admissions Open for 2026-27',
     text: 'Pre-KG to Class VIII, give your child a foundation built on knowledge and character.',
     cta: { label: 'Apply Now', to: '/admissions' },

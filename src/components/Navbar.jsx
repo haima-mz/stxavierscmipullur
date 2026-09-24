@@ -37,8 +37,18 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className="top_header_banner">
-      {/* TOP CONTACT BAR */}
+    <>
+      {/* TOP CONTACT BAR
+          (this used to be wrapped, together with #navigation, in a parent
+          <div className="top_header_banner"> — dropped (not just moved onto
+          this bar) because style.css defines ".top_header_banner" a second
+          time, later in the file, as an unrelated hero-banner-image class
+          used elsewhere on the homepage; carrying that class here would let
+          that later, same-specificity rule override this bar's own blue
+          background. Removing the wrapper also means #navigation is now a
+          sibling instead of a child, so its "position: sticky"
+          (school-overrides.css) can stick for the full height of the page
+          instead of being boxed in by that wrapper's own short height.) */}
       <section className="logo-contact">
         <div className="container">
           <div className="row">
@@ -134,6 +144,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }

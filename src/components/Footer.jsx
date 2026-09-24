@@ -100,7 +100,7 @@ export default function Footer() {
               <ul>
                 <li><Link to="/contact">Contact</Link></li>
                 <li><Link to="/about#disclosure">Disclosure</Link></li>
-                <li><Link to="/downloads">Downloads</Link></li>
+                <li><Link to="/gallery">Gallery</Link></li>
               </ul>
             </div>
           </div>

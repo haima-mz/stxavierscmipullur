@@ -32,7 +32,7 @@ const STAGES = [
     text: 'The Middle School, comprising Classes 5 to 7, provides students with opportunities to move from foundational learning towards greater independence, critical thinking and responsible participation. Students are encouraged to develop scientific temper, logical reasoning, creativity, teamwork, leadership and effective communication through academics and a variety of co-curricular activities. Science exhibitions, Arts Fest, sports, CCA programmes, educational activities, competitions and interactive learning experiences encourage students to discover their interests and apply their knowledge beyond the classroom. Special attention to personality development, communication skills, emotional maturity, self-confidence, time management and goal setting prepares students to face new challenges with courage and responsibility.',
     images: [
       './assets/images/gallery/Xviers825x1000-2.webp',
-      './assets/images/gallery/Xviers825x1000-31.webp',
+      './assets/images/gallery/Xviers825x1000-51.webp',
     ],
   },
   {
@@ -164,7 +164,7 @@ const CCA_CATEGORIES = [
 export default function Academics() {
   return (
     <>
-      <PageTop title="Academics" crumb="Academics" bg="./assets/images/academics/science-lab-microscope.webp" />
+      <PageTop title="Academics" crumb="Academics" bg="./assets/images/academics/preprimary-wooden-toys.webp" />
 
       {STAGES.map((s, i) => (
         <section id={s.id} key={s.id} className={`ab_one section-padding ${i % 2 === 1 ? 'school-row-reverse' : ''}`}>
@@ -197,7 +197,7 @@ export default function Academics() {
           <div className="row">
             <div className="col-lg-6 col-sm-12 col-xs-12">
               <ImageCarousel
-                images={['./assets/images/academics/science-lab-microscope.webp']}
+                images={['./assets/images/academics/preprimary-wooden-toys.webp']}
                 alt="Science Laboratory"
               />
             </div>
@@ -329,7 +329,7 @@ export default function Academics() {
               { icon: 'fa-solid fa-palette', title: 'Arts & Crafts' },
               { icon: 'fa-solid fa-music', title: 'Music & Dance', img: './assets/images/academics/cocurricular-dance.webp' },
               { icon: 'fa-solid fa-futbol', title: 'Sports & Fitness', img: './assets/images/amenities/archery-range.webp' },
-              { icon: 'fa-solid fa-flask', title: 'Science & Computer Labs', img: './assets/images/academics/science-lab-microscope.webp' },
+              { icon: 'fa-solid fa-flask', title: 'Science & Computer Labs', img: './assets/images/academics/preprimary-wooden-toys.webp' },
             ].map((c, i) => (
               <div className="col-lg-3 col-sm-6 col-xs-12" key={c.title}>
                 {c.img ? (

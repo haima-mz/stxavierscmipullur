@@ -27,10 +27,10 @@ export default function About() {
           <div className="row">
             <div className="col-lg-6 col-sm-12 col-xs-12">
               <div className="ab_img">
-                <img src="./assets/images/all-img/Xaviers-Banner-825x1000.webp" className="img-fluid" alt="About St. Xavier's CMI School" />
-                <div className="wc_year">
+                {/* <div className="wc_year">
                   <h3><span>931352</span> <br />CBSE Affiliation No.</h3>
-                </div>
+                </div> */}
+                <img src="./assets/images/all-img/Xaviers-Banner-825x1000.webp" className="img-fluid" alt="About St. Xavier's CMI School" />                
               </div>
               <br/>
               <h5><i className="fa-solid fa-people-roof"></i>&nbsp;&nbsp;Partnership with Families and the Wider Community</h5><br/>

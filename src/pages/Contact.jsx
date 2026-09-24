@@ -72,9 +72,9 @@ export default function Contact() {
               <div className="school-map">
                 <iframe
                   title="School Location"
-                  src="https://www.google.com/maps?q=Pullur,Irinjalakuda,Thrissur,Kerala&output=embed"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.9860170499355!2d76.248599!3d10.3430028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7f7eaa514fc05%3A0xfbfd82d4196bf1c1!2sSt.%20Xavier's%20CMI%20School!5e0!3m2!1sen!2sin!4v1790057441530!5m2!1sen!2sin"  allowfullscreen="" referrerpolicy="strict-origin-when-cross-origin"
                   width="100%"
-                  height="100%"
+                  height="550px"
                   style={{ border: 0 }}
                   loading="lazy"
                 />

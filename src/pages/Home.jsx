@@ -7,7 +7,7 @@ const GALLERY_PREVIEW = [
   './assets/images/gallery/Xviers825x1000-2.webp',
   './assets/images/gallery/Xviers825x1000-4.webp',
   './assets/images/gallery/Xviers825x1000-3.webp',
-  './assets/images/gallery/Xviers825x1000-5.webp',
+  './assets/images/gallery/Xviers825x1000-7.webp',
 ]
 
 const FEATURES = [
@@ -240,8 +240,8 @@ export default function Home() {
               <div className="single_ins">
                 <div className="single_ins_content">
                   <h4>We're Hiring</h4>
-                  <h1>Join Our Faculty</h1>
-                  <p>Passionate educators, send your CV and cover letter to our office.</p>
+                  <h1>Join As Our Faculty</h1>
+                  <p>We welcome applications throughout the year and will reach out if a suitable opening arises. Send your CV to our office mailid.</p>
                   <Link to="/contact" className="cta">
                     <span>Contact Us</span>
                     <svg width="13px" height="10px" viewBox="0 0 13 10">

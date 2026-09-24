@@ -2,12 +2,12 @@
 .school-logo-text {
   font-family: 'Lexend', sans-serif;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 19px;
   color: #1c2530;
   display: inline-block;
   line-height: 1.2;
 }
-.school-logo-text span { display: block; font-size: 16px; font-weight: 500; color: #2c7aff; letter-spacing: 0.04em; }
+.school-logo-text span { display: block; font-size: 13px; font-weight: 500; color: #2c7aff; letter-spacing: 0.04em; }
 .school-logo-text--footer { color: #fff; font-size: 26px; }
 .school-logo-text--footer span { color: #050b4f; }
 .school-logo-img {
@@ -18,23 +18,44 @@
 .school-logo-img--footer {
   height: 100px;
 }
+.single_footer .school-logo-img--footer {
+  width: 100px;
+}
+
+/* Nav logo lockup: icon + school name side-by-side instead of stacked, so the
+   header doesn't need the image's full height plus two text lines beneath it.
+   The extra "a.school-logo-combo" specificity is needed to beat style.css's
+   ".site-logo a { display:block }" rule (same class-count, but that one also
+   matches the element type, so it would otherwise win on source order). */
+.site-logo a.school-logo-combo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.site-logo {
+  width: auto;
+  max-width: 100%;
+}
 
 /* Responsive nav logo — scoped to .site-logo so the footer logo (below) is untouched.
-   Desktop (>1199px, same breakpoint the nav already uses) keeps the original 100x100.
-   width:auto (instead of a fixed width) keeps the image's real aspect ratio at every size. */
+   width:auto (instead of a fixed width) keeps the image's real aspect ratio at every size.
+   Sizes taper down from desktop so the horizontal lockup stays compact at every breakpoint. */
+.site-logo .school-logo-img { height: 58px; width: 58px; }
 @media only screen and (max-width: 1199px) {
-  .site-logo .school-logo-img { height: 64px; width: auto; }
+  .site-logo .school-logo-img { height: 54px; width: 54px; }
 }
 @media only screen and (max-width: 767px) {
-  .site-logo .school-logo-img { height: 52px; width: auto; }
+  .site-logo .school-logo-img { height: 46px; width: 46px; }
 }
 @media only screen and (max-width: 480px) {
-  .site-logo .school-logo-img { height: 40px; width: auto; }
+  .site-logo .school-logo-img { height: 38px; width: 38px; }
+  .site-logo .school-logo-text { font-size: 15px; }
+  .site-logo .school-logo-text span { font-size: 11px; }
 }
 
 /* Responsive footer logo (footer has more vertical room, so it can stay a bit larger) */
 @media only screen and (max-width: 767px) {
-  .school-logo-img--footer { height: 70px; width: auto; }
+  .single_footer .school-logo-img--footer { height: 70px; width: 70px; }
 }
 
 /* ============ HERO CAROUSEL ============ */
@@ -163,7 +184,107 @@
      55%-wide column leaves a dead gap between the logo and the hamburger button
      on tablets / small laptops (992px–1199px). */
   .col-60 { display: none !important; }
+
+  /* .col-20 still carries its desktop width:15% here (the auto-width override
+     further down only applies at ≥1200px), which on a phone-width screen isn't
+     enough room for the horizontal logo lockup — the school name wraps onto
+     several lines and pushes the hamburger button onto its own row below. Let
+     the logo column size to its content instead, and keep it on one row with
+     the toggle button pinned to the right. */
+  #navigation .row {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  #navigation .col-20 {
+    width: auto;
+    max-width: 100%;
+    flex: 1 1 auto;
+    min-width: 0;
+    padding-right: 0;
+  }
+  /* Bootstrap's grid CSS applies "width:100%" to every direct child of .row
+     (it expects only .col-* children, but the toggle button and the mobile
+     menu <ul> also live directly in this .row). That definite width becomes
+     the flex-basis no matter what flex-grow/shrink say, which is why the
+     button was stretching to fill the whole row. Cancel it so the button
+     sizes to its own (small) content instead. */
+  #navigation .school-mobile-toggle {
+    width: auto;
+    max-width: none;
+    margin-left: auto;
+    padding-right: 0;
+    padding-left: 8px;
+    margin-top: 0;
+    flex: 0 0 auto;
+  }
 }
+
+/* ============ DESKTOP NAV SPACING ============
+   style.css lays the navbar out as three fixed-percentage columns
+   (.col-20 15% / .col-60 55% / .col-30 30%). On a wide desktop screen the
+   menu links and the "Admissions Open" button don't come close to filling
+   their 55%/30% columns, so left-aligned content inside them leaves large,
+   uneven blank gaps between the logo, the menu, and the button.
+   Scoped to #navigation only (not the global .row/.col-* used elsewhere on
+   the site) and to desktop widths only (≥1200px, the breakpoint where the
+   full menu — rather than the hamburger — is shown), this switches those
+   three columns from fixed percentages to their natural content width, so
+   the logo and menu sit close together and only the leftover space (not a
+   fixed 30%) separates the menu from the button. */
+/* style.css sets "overflow-x:hidden" on <body> to stop horizontal scrollbars
+   from full-bleed sections. That alone forces the browser to compute body's
+   overflow-y as "auto", which quietly turns <body> into its own scroll
+   container — and any "position: sticky" element inside it (like the sticky
+   nav below) then sticks relative to body's scrollport instead of the page's
+   real scrolling element, so it never visually sticks at all. Moving the
+   horizontal clip up to <html> keeps the same no-horizontal-scroll behaviour
+   without creating that extra scroll container. */
+html { overflow-x: hidden; }
+body { overflow-x: visible; }
+body { background-color: #ecf3fe;}
+
+/* Keep the main menu bar pinned to the top of the viewport while scrolling,
+   on both desktop and mobile. #navigation is its own element, separate from
+   the blue contact bar above it (.logo-contact), so only the menu bar
+   sticks — the contact bar scrolls away with the rest of the page. This also
+   doubles as the positioned ancestor .mobile_menu (the phone dropdown,
+   below) needs for its "position:absolute; top:100%" to anchor correctly —
+   sticky counts as positioned, same as relative would. */
+#navigation {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 6px 18px rgba(23, 23, 36, 0.06);
+}
+
+@media only screen and (min-width: 1200px) {
+  /* Bootstrap's own container grows to 1320px on very wide screens (≥1400px);
+     that's fine for page content, but it's far wider than the logo+menu+button
+     ever need, so it was leaving a large dead gap between the menu and the
+     "Admissions Open" button (which sits pinned to the container's right edge
+     below). Capping the nav's own container keeps that gap in proportion. */
+  #navigation .container {
+    max-width: 1100px;
+  }
+  #navigation .row {
+    flex-wrap: nowrap;
+  }
+  #navigation .col-20 {
+    width: auto;
+    flex: 0 0 auto;
+  }
+  #navigation .col-60 {
+    width: auto;
+    flex: 0 1 auto;
+    margin-left: 30px;
+  }
+  #navigation .col-30 {
+    width: auto;
+    flex: 0 0 auto;
+    margin-left: auto;
+  }
+}
+
 .mobile_menu {
   display: none;
   list-style: none;
@@ -382,7 +503,7 @@
    leaves very little margin before it runs into the frame's right edge. Bring it
    in from the edge and trim its padding/font so it stays safely inside the frame. */
 @media only screen and (max-width: 480px) {
-  .wc_year h3 { left: 16px; padding: 14px 18px; font-size: 16px; }
+  .wc_year h3 { left: 70px; padding: 14px 18px; font-size: 16px; }
   .wc_year h3 span { font-size: 22px; }
 }
 
@@ -677,7 +798,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 4px;
+  height: 31px;
   background: var(--cca-accent, #2c7aff);
   transform: scaleX(0.3);
   transform-origin: left;
